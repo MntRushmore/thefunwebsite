@@ -1,5 +1,5 @@
 <script>
-  let { onclick, href, showarrow = false } = $props();
+  let { onclick = undefined, href = undefined, showarrow = false } = $props();
 
 </script>
 

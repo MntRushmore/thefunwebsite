@@ -1,10 +1,5 @@
 <script>
-	import ShortTextInput from '$lib/components/ShortTextInput.svelte';
-
-	let email = $state('');
 	let expandedFaqItem = $state(/** @type {number | null} */ (null));
-	let showCatInfo = $state(false);
-	let showStickynoteInfo = $state(false);
 
 	// FAQ data — replace with your own questions and answers
 	const faqData = [
@@ -59,43 +54,23 @@
 	<img class="logo-bg" src="hero.png" alt="The Fun Website" />
 
 	<div class="login-inputs">
-		<p style="color: white;">Welcome to The Fun Website — placeholder tagline goes here.</p>
-		<ShortTextInput bind:value={email} placeholder="enter your email">get started</ShortTextInput>
+		<p style="color: white;">click a button to have fun!</p>
 	</div>
 
 	<div class="sample-room">
-		<img src="landing/sample room.png" class="room-bg" alt="" />
+		<div class="logo-stage">
+			<img src="logo.png" class="room-bg" alt="The Fun Website" />
 
-		<img
-			src="landing/stickynote.png"
-			class="room-stickynote"
-			alt=""
-			onmouseenter={() => (showStickynoteInfo = true)}
-			onmouseleave={() => (showStickynoteInfo = false)}
-		/>
-
-		<div class="room-stickynote-info" class:visible={showStickynoteInfo}>
-			<p style="color: white;">placeholder note text</p>
-			<p style="color: white;">~ anonymous</p>
+			<a href="/game" class="badge badge-games" aria-label="Games">
+				<img src="landing/makegames.png" alt="Games" />
+			</a>
+			<a href="/puzzle" class="badge badge-puzzles" aria-label="Puzzles">
+				<img src="landing/buildhouses.png" alt="Puzzles" />
+			</a>
+			<a href="/quizzes" class="badge badge-quizzes" aria-label="Quizzes">
+				<img src="landing/getprizes.png" alt="Quizzes" />
+			</a>
 		</div>
-
-		<img
-			src="landing/cat.png"
-			class="room-cat"
-			alt=""
-			onmouseenter={() => (showCatInfo = true)}
-			onmouseleave={() => (showCatInfo = false)}
-		/>
-
-		<div class="room-cat-info" class:visible={showCatInfo}>
-			<p style="color: white;">placeholder title</p>
-			<p style="color: white;">placeholder description</p>
-			<p style="color: white;">placeholder detail</p>
-		</div>
-
-		<img src="landing/makegames.png" class="room-makegames" alt="games" />
-		<img src="landing/buildhouses.png" class="room-buildhouses" alt="puzzles" />
-		<img src="landing/getprizes.png" class="room-getprizes" alt="quizzes" />
 	</div>
 
 	<div class="prizes-row">
@@ -184,115 +159,58 @@
 		min-height: 50vw;
 	}
 
-	.sample-room img {
-		position: absolute;
-	}
-
-	.sample-room .room-bg {
+	/* Sized to the logo so badge percentages reference the circle itself. */
+	.logo-stage {
+		position: relative;
 		width: 50vw;
-		top: 0;
 	}
 
-	.sample-room .room-cat {
-		width: 5vw;
-		top: 70%;
-		left: 52%;
-	}
-
-	.sample-room .room-stickynote {
-		width: 5vw;
-		top: 35%;
-		left: 40%;
-	}
-
-	.room-cat,
-	.room-stickynote {
-		transition: filter 0.2s;
-	}
-
-	.room-cat-info {
-		position: absolute;
-		display: none;
-
-		background-color: white;
-
-		top: 60%;
-		left: 50%;
-	}
-
-	.room-cat-info p {
-		margin: 0;
-		font-size: 0.8em;
-	}
-
-	.room-cat-info.visible {
+	.logo-stage .room-bg {
+		width: 100%;
 		display: block;
 	}
 
-	.room-stickynote-info {
+	/* Round sticker links that orbit the circular logo. Each is centered on
+	   its anchor point via translate(-50%, -50%), then nudged onto the
+	   logo's perimeter so they frame it evenly without covering the face. */
+	.badge {
 		position: absolute;
-		display: none;
-
-		background-color: white;
-		top: 29%;
-		left: 38%;
+		width: 14vw;
+		display: block;
+		transform: translate(-50%, -50%);
+		transition: transform 0.2s ease;
+		filter: drop-shadow(0 6px 12px rgba(20, 50, 100, 0.25));
+		z-index: 2;
 	}
 
-	.room-stickynote-info p {
-		margin: 0;
-		font-size: 0.8em;
-	}
-
-	.room-stickynote-info.visible {
+	.badge img {
+		width: 100%;
+		height: auto;
 		display: block;
 	}
 
-	.room-circle-info.makegames {
-		position: absolute;
-		top: 2%;
-		left: 21%;
+	.badge:hover {
+		transform: translate(-50%, -50%) scale(1.1) rotate(-4deg);
 	}
 
-	.room-makegames {
-		height: 15vw;
-		top: 5%;
-		left: 16%;
+	/* games — left rim, vertically centered in the clear band between the
+	   "fun website" text above and the names below */
+	.badge-games {
+		top: 50%;
+		left: -4%;
 	}
 
-	.room-text {
-		text-align: center;
-		position: absolute;
-		alignment-baseline: middle;
+	/* puzzles — bottom-left corner, pushed outside the circle so it sits below
+	   the names arc in open sky */
+	.badge-puzzles {
+		top: 100%;
+		left: 6%;
 	}
 
-	.room-text.room-makegames {
-		transform: translateX(-50%) translateY(-50%);
-		top: 19%;
-		left: 30%;
-	}
-
-	.room-buildhouses {
-		height: 15vw;
-		top: 40%;
-		left: 5%;
-	}
-
-	.room-text.room-buildhouses {
-		transform: translateX(-50%) translateY(-50%);
-		top: 55%;
-		left: 12.5%;
-	}
-
-	.room-getprizes {
-		height: 15vw;
-		top: 72.5%;
-		left: 20%;
-	}
-
-	.room-text.room-getprizes {
-		transform: translateX(-50%) translateY(-50%);
-		top: 86.5%;
-		left: 26.5%;
+	/* quizzes — bottom-right corner, mirrored */
+	.badge-quizzes {
+		top: 100%;
+		left: 94%;
 	}
 
 	.prizes-row {
