@@ -74,11 +74,11 @@
 	</div>
 
 	<div class="prizes-row">
-		<img src="prizes/prize-1.png" alt="Prize one" class="prize-image" />
-		<img src="prizes/prize-2.png" alt="Prize two" class="prize-image" />
-		<img src="prizes/prize-3.png" alt="Prize three" class="prize-image highlight" />
-		<img src="prizes/prize-4.png" alt="Prize four" class="prize-image" />
-		<img src="prizes/prize-5.png" alt="Prize five" class="prize-image" />
+		<img src="prizes/crossword.png" alt="Crossword puzzle" class="prize-image" />
+		<img src="prizes/personality-quiz.png" alt="Personality Quiz" class="prize-image" />
+		<img src="prizes/fun-tickets.png" alt="The Fun Website tickets" class="prize-image highlight" />
+		<img src="prizes/quiz-logo.png" alt="Quiz" class="prize-image" />
+		<img src="prizes/subway-surfers.png" alt="Subway Surfers" class="prize-image" />
 	</div>
 
 	<div class="faq-section">
