@@ -215,32 +215,29 @@
 
 	.prizes-row {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
+		gap: clamp(2px, 2.5vw, 48px);
 		margin-top: 40px;
-		max-width: 100vw;
+		width: 100%;
 		box-sizing: border-box;
-		margin-left: calc(-50vw + 50%);
+		padding: 24px 6px;
 		overflow-x: hidden;
-		padding-top: 15px;
-		padding-bottom: 15px;
 	}
 
 	.prize-image {
-		height: 15vw;
+		height: clamp(42px, 13vw, 150px);
 		width: auto;
 		object-fit: contain;
-		margin-left: -5vw;
-		flex: 1;
+		filter: drop-shadow(0 6px 12px rgba(20, 50, 100, 0.25));
 		animation: bounce 2s ease-in-out infinite;
 	}
 
 	.prize-image.highlight {
-		height: 23vw;
+		height: clamp(68px, 19vw, 230px);
 	}
 
 	.prize-image:first-child {
-		margin-left: 0;
 		animation-delay: 0s;
 	}
 
