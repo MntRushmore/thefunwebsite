@@ -420,7 +420,11 @@ export const quizzes = [
 			}
 		},
 		ties: {
-			AB: { title: 'Flight', emoji: '🦅', blurb: 'Brave and brilliant — nothing can hold you down.' },
+			AB: {
+				title: 'Flight',
+				emoji: '🦅',
+				blurb: 'Brave and brilliant — nothing can hold you down.'
+			},
 			AC: { title: 'Super Speed', emoji: '⚡', blurb: 'Fast, fearless, and always there to help.' },
 			AD: { title: 'Force Fields', emoji: '🛡️', blurb: 'Tough, focused, and unbreakable.' },
 			BC: { title: 'Telepathy', emoji: '🔮', blurb: 'A wise mind with a caring soul.' },
@@ -696,99 +700,99 @@ export const quizzes = [
 	},
 	{
 		id: 'element',
-		name: 'Which Element Are You?',
+		name: 'What Element Are You?',
 		emoji: '🔥',
 		tagline: 'Fire, water, earth, or air — what powers you?',
 		accent: '#9B5DE5',
 		questions: [
 			{
-				prompt: 'Your personality is best described as:',
+				prompt: 'Your friends would describe you as:',
 				answers: [
-					{ key: 'A', text: 'Passionate and fiery' },
-					{ key: 'B', text: 'Calm and deep' },
-					{ key: 'C', text: 'Steady and grounded' },
-					{ key: 'D', text: 'Free and curious' }
+					{ key: 'A', text: 'Energetic and bold' },
+					{ key: 'B', text: 'Calm and thoughtful' },
+					{ key: 'C', text: 'Steady and reliable' },
+					{ key: 'D', text: 'Free-spirited and curious' }
 				]
 			},
 			{
-				prompt: 'When you’re excited, you:',
+				prompt: 'When you face a problem, you usually:',
 				answers: [
-					{ key: 'A', text: 'Burst with energy' },
-					{ key: 'B', text: 'Feel it deeply and quietly' },
-					{ key: 'C', text: 'Stay cool and steady' },
-					{ key: 'D', text: 'Bounce between ideas' }
+					{ key: 'A', text: 'Act fast and deal with it' },
+					{ key: 'B', text: 'Think deeply and go with your feelings' },
+					{ key: 'C', text: 'Make a practical plan' },
+					{ key: 'D', text: 'Look for a creative or unusual solution' }
 				]
 			},
 			{
-				prompt: 'Pick a place:',
+				prompt: 'Your ideal place to relax is:',
 				answers: [
-					{ key: 'A', text: 'A roaring bonfire' },
-					{ key: 'B', text: 'A deep ocean' },
-					{ key: 'C', text: 'A quiet forest' },
-					{ key: 'D', text: 'A high mountain peak' }
+					{ key: 'A', text: 'Somewhere exciting, like a sports game or concert' },
+					{ key: 'B', text: 'Near water, like a beach, lake, or pool' },
+					{ key: 'C', text: 'In nature, like a forest, garden, or mountains' },
+					{ key: 'D', text: 'Somewhere open and breezy, like a rooftop or field' }
 				]
 			},
 			{
-				prompt: 'Your friends value your:',
+				prompt: 'In a group project, you are:',
 				answers: [
-					{ key: 'A', text: 'Drive and passion' },
-					{ key: 'B', text: 'Emotional depth' },
-					{ key: 'C', text: 'Reliability' },
-					{ key: 'D', text: 'Imagination' }
+					{ key: 'A', text: 'The motivator who gets things moving' },
+					{ key: 'B', text: 'The listener who understands everyone' },
+					{ key: 'C', text: 'The planner who keeps things organized' },
+					{ key: 'D', text: 'The idea person who thinks outside the box' }
 				]
 			},
 			{
-				prompt: 'How do you face challenges?',
+				prompt: 'Pick a power:',
 				answers: [
-					{ key: 'A', text: 'Head-on with fire' },
-					{ key: 'B', text: 'Adapt and flow around them' },
-					{ key: 'C', text: 'Stand firm and outlast them' },
-					{ key: 'D', text: 'Find a clever new angle' }
+					{ key: 'A', text: 'Shooting flames' },
+					{ key: 'B', text: 'Controlling waves' },
+					{ key: 'C', text: 'Growing plants or moving rocks' },
+					{ key: 'D', text: 'Flying or controlling wind' }
 				]
 			},
 			{
-				prompt: 'Pick a power move:',
+				prompt: 'What annoys you most?',
 				answers: [
-					{ key: 'A', text: 'Unleash a flame' },
-					{ key: 'B', text: 'Command the tides' },
-					{ key: 'C', text: 'Shake the ground' },
-					{ key: 'D', text: 'Summon a storm' }
+					{ key: 'A', text: 'Being held back' },
+					{ key: 'B', text: 'People being careless with feelings' },
+					{ key: 'C', text: 'Messy plans or chaos' },
+					{ key: 'D', text: 'Boring routines' }
 				]
 			},
 			{
-				prompt: 'Your weakness is:',
+				prompt: 'Your style is usually:',
 				answers: [
-					{ key: 'A', text: 'Burning too hot too fast' },
-					{ key: 'B', text: 'Getting lost in feelings' },
-					{ key: 'C', text: 'Being too stubborn' },
-					{ key: 'D', text: 'Drifting without focus' }
+					{ key: 'A', text: 'Bold and noticeable' },
+					{ key: 'B', text: 'Soft and comfortable' },
+					{ key: 'C', text: 'Simple and practical' },
+					{ key: 'D', text: 'Unique and random' }
 				]
 			},
 			{
-				prompt: 'Pick a time of day:',
+				prompt: 'Choose a word:',
 				answers: [
-					{ key: 'A', text: 'High noon' },
-					{ key: 'B', text: 'Late night' },
-					{ key: 'C', text: 'Early morning' },
-					{ key: 'D', text: 'Golden hour' }
+					{ key: 'A', text: 'Passion' },
+					{ key: 'B', text: 'Emotion' },
+					{ key: 'C', text: 'Strength' },
+					{ key: 'D', text: 'Freedom' }
 				]
 			},
 			{
-				prompt: 'People feel ___ around you:',
+				prompt: 'If your friend is upset, you:',
 				answers: [
-					{ key: 'A', text: 'Energized' },
-					{ key: 'B', text: 'Understood' },
-					{ key: 'C', text: 'Safe' },
-					{ key: 'D', text: 'Inspired' }
+					{ key: 'A', text: 'Try to hype them up and distract them' },
+					{ key: 'B', text: 'Listen and comfort them' },
+					{ key: 'C', text: 'Help them solve the problem' },
+					{ key: 'D', text: 'Suggest doing something fun or different' }
 				]
 			},
 			{
-				prompt: 'One word for you:',
+				prompt: 'Your dream adventure would be:',
 				answers: [
-					{ key: 'A', text: 'Fierce' },
-					{ key: 'B', text: 'Deep' },
-					{ key: 'C', text: 'Solid' },
-					{ key: 'D', text: 'Free' }
+					{ key: 'A', text: 'Exploring a volcano or desert' },
+					{ key: 'B', text: 'Sailing across the ocean' },
+					{ key: 'C', text: 'Hiking through a giant forest' },
+					{ key: 'D', text: 'Floating in a hot air balloon or skydiving' }
 				]
 			}
 		],
@@ -797,34 +801,34 @@ export const quizzes = [
 				title: 'Fire',
 				emoji: '🔥',
 				blurb:
-					'You’re passionate, bold, and full of energy. You chase what you want and inspire others to do the same. Your spark is contagious — just remember to rest before you burn out.'
+					'You are passionate, bold, and full of energy. You like action and aren’t afraid of challenges. People may see you as confident and exciting. Just remember to slow down sometimes so you don’t burn out.'
 			},
 			B: {
 				title: 'Water',
 				emoji: '🌊',
 				blurb:
-					'You’re deep, intuitive, and emotionally wise. You adapt to anything and feel things fully. People trust you with their hearts because you truly understand them.'
+					'You are thoughtful, caring, and emotionally smart. You understand people’s feelings and can be very calming to be around. You may go with the flow, but you also have quiet strength.'
 			},
 			C: {
 				title: 'Earth',
-				emoji: '🌍',
+				emoji: '🌱',
 				blurb:
-					'You’re grounded, dependable, and strong. You’re the rock everyone leans on, and you bring stability to any storm. People feel safe knowing you’ve got their back.'
+					'You are dependable, patient, and grounded. People can count on you because you’re steady and practical. You like things that feel real and meaningful. Your strength is being reliable even when things get difficult.'
 			},
 			D: {
 				title: 'Air',
 				emoji: '🌬️',
 				blurb:
-					'You’re curious, free-spirited, and full of ideas. You see the world from every angle and never stop exploring. Your imagination takes everyone to new places.'
+					'You are curious, creative, and independent. You like freedom, ideas, and exploring new possibilities. You may get bored with the same routine, but your imagination helps you see the world differently.'
 			}
 		},
 		ties: {
-			AB: { title: 'Steam', emoji: '♨️', blurb: 'Passion and depth combined.' },
-			AC: { title: 'Lava', emoji: '🌋', blurb: 'Fierce and unstoppable.' },
-			AD: { title: 'Lightning', emoji: '⚡', blurb: 'Fiery, fast, and free.' },
-			BC: { title: 'Ice', emoji: '🧊', blurb: 'Deep and solid as stone.' },
-			BD: { title: 'Mist', emoji: '🌫️', blurb: 'Deep, dreamy, and free.' },
-			CD: { title: 'Sandstorm', emoji: '🏜️', blurb: 'Grounded but wild.' }
+			AB: { title: 'Steam', emoji: '♨️', blurb: 'Intense, emotional, and powerful.' },
+			AC: { title: 'Lava', emoji: '🌋', blurb: 'Strong, bold, and unstoppable.' },
+			AD: { title: 'Lightning', emoji: '⚡', blurb: 'Fast, exciting, and unpredictable.' },
+			BC: { title: 'Mud/Clay', emoji: '🪨', blurb: 'Caring, steady, and adaptable.' },
+			BD: { title: 'Mist', emoji: '🌫️', blurb: 'Dreamy, thoughtful, and mysterious.' },
+			CD: { title: 'Dust Storm', emoji: '🏜️', blurb: 'Grounded but adventurous.' }
 		}
 	},
 	{
@@ -1206,6 +1210,2060 @@ export const quizzes = [
 			BC: { title: 'Boston Cream', emoji: '🍮', blurb: 'Sweet with a surprise inside.' },
 			BD: { title: 'Cinnamon Donut', emoji: '🍩', blurb: 'Sweet and simple.' },
 			CD: { title: 'Maple Bar', emoji: '🍁', blurb: 'Surprising yet chill.' }
+		}
+	},
+	{
+		id: 'drink',
+		name: 'What Drink Are You?',
+		emoji: '🥤',
+		tagline: 'Sip your way to your true personality.',
+		accent: '#FF6B6B',
+		questions: [
+			{
+				prompt: 'Your friends would describe you as:',
+				answers: [
+					{ key: 'A', text: 'Energetic and fun' },
+					{ key: 'B', text: 'Calm and reliable' },
+					{ key: 'C', text: 'Sweet and caring' },
+					{ key: 'D', text: 'Creative and unique' },
+					{ key: 'E', text: 'Chill and easygoing' }
+				]
+			},
+			{
+				prompt: 'Your perfect weekend would be:',
+				answers: [
+					{ key: 'A', text: 'Going somewhere exciting' },
+					{ key: 'B', text: 'Relaxing and getting organized' },
+					{ key: 'C', text: 'Hanging out with people you love' },
+					{ key: 'D', text: 'Making art, music, videos, or stories' },
+					{ key: 'E', text: 'Staying comfy and doing whatever sounds good' }
+				]
+			},
+			{
+				prompt: 'In a group project, you are usually:',
+				answers: [
+					{ key: 'A', text: 'The one with big energy' },
+					{ key: 'B', text: 'The one keeping everyone on track' },
+					{ key: 'C', text: 'The one making sure everyone feels included' },
+					{ key: 'D', text: 'The one with cool ideas' },
+					{ key: 'E', text: 'The one who keeps things relaxed' }
+				]
+			},
+			{
+				prompt: 'Pick a color:',
+				answers: [
+					{ key: 'A', text: 'Bright red' },
+					{ key: 'B', text: 'Clear blue' },
+					{ key: 'C', text: 'Soft pink' },
+					{ key: 'D', text: 'Purple' },
+					{ key: 'E', text: 'Light yellow' }
+				]
+			},
+			{
+				prompt: 'If something goes wrong, you:',
+				answers: [
+					{ key: 'A', text: 'React fast and try to fix it' },
+					{ key: 'B', text: 'Stay calm and think logically' },
+					{ key: 'C', text: 'Talk to someone about it' },
+					{ key: 'D', text: 'Try a totally new solution' },
+					{ key: 'E', text: 'Take a break, then deal with it' }
+				]
+			},
+			{
+				prompt: 'Your favorite kind of weather is:',
+				answers: [
+					{ key: 'A', text: 'Sunny and hot' },
+					{ key: 'B', text: 'Cool and fresh' },
+					{ key: 'C', text: 'Cozy and rainy' },
+					{ key: 'D', text: 'Weird and dramatic, like thunderstorms' },
+					{ key: 'E', text: 'Warm with a nice breeze' }
+				]
+			},
+			{
+				prompt: 'Pick a snack:',
+				answers: [
+					{ key: 'A', text: 'Spicy chips' },
+					{ key: 'B', text: 'Crackers or fruit' },
+					{ key: 'C', text: 'Cookies' },
+					{ key: 'D', text: 'Something unusual or new' },
+					{ key: 'E', text: 'Popcorn' }
+				]
+			},
+			{
+				prompt: 'Which word fits you best?',
+				answers: [
+					{ key: 'A', text: 'Exciting' },
+					{ key: 'B', text: 'Steady' },
+					{ key: 'C', text: 'Kind' },
+					{ key: 'D', text: 'Original' },
+					{ key: 'E', text: 'Relaxed' }
+				]
+			}
+		],
+		results: {
+			A: {
+				title: 'Soda',
+				emoji: '🥤',
+				blurb:
+					'You’re bubbly, energetic, and fun to be around. You bring excitement wherever you go, and people probably like your confidence and humor.'
+			},
+			B: {
+				title: 'Water',
+				emoji: '💧',
+				blurb:
+					'You’re calm, dependable, and balanced. You may not always need attention, but people trust you because you’re steady and real.'
+			},
+			C: {
+				title: 'Hot Chocolate',
+				emoji: '☕',
+				blurb:
+					'You’re warm, sweet, and caring. You make people feel comfortable and safe, and you probably care a lot about your friends and family.'
+			},
+			D: {
+				title: 'Smoothie',
+				emoji: '🍓',
+				blurb:
+					'You’re creative, colorful, and different in a good way. You have your own style and probably like trying new ideas or making things.'
+			},
+			E: {
+				title: 'Lemonade',
+				emoji: '🍋',
+				blurb:
+					'You’re chill, bright, and easygoing. You can make boring situations more fun, and you usually have a relaxed but positive vibe.'
+			}
+		},
+		ties: {
+			AD: { title: 'Fruit Punch', emoji: '🍹', blurb: 'Bold, creative, and full of personality.' },
+			AE: { title: 'Sparkling Lemonade', emoji: '🥂', blurb: 'Fun, friendly, and cheerful.' },
+			BC: { title: 'Warm Tea', emoji: '🍵', blurb: 'Peaceful, thoughtful, and comforting.' },
+			BE: { title: 'Iced Water', emoji: '🧊', blurb: 'Cool, calm, and relaxed.' },
+			CD: { title: 'Strawberry Milk', emoji: '🥛', blurb: 'Sweet, creative, and lovable.' },
+			DE: { title: 'Bubble Tea', emoji: '🧋', blurb: 'Unique, fun, and chill.' }
+		}
+	},
+	{
+		id: 'fruit',
+		name: 'What Fruit Are You?',
+		emoji: '🍓',
+		tagline: 'A juicy little quiz to find your flavor.',
+		accent: '#FF85A2',
+		questions: [
+			{
+				prompt: 'Your friends would describe you as:',
+				answers: [
+					{ key: 'A', text: 'Fun and energetic' },
+					{ key: 'B', text: 'Sweet and caring' },
+					{ key: 'C', text: 'Chill and relaxed' },
+					{ key: 'D', text: 'Bold and confident' },
+					{ key: 'E', text: 'Unique and creative' }
+				]
+			},
+			{
+				prompt: 'Your perfect day would be:',
+				answers: [
+					{ key: 'A', text: 'Doing something exciting with friends' },
+					{ key: 'B', text: 'Having a cozy day with people you love' },
+					{ key: 'C', text: 'Relaxing, watching movies, or gaming' },
+					{ key: 'D', text: 'Trying something new and adventurous' },
+					{ key: 'E', text: 'Making art, music, videos, or stories' }
+				]
+			},
+			{
+				prompt: 'In a group project, you are usually:',
+				answers: [
+					{ key: 'A', text: 'The one who brings the energy' },
+					{ key: 'B', text: 'The one who helps everyone get along' },
+					{ key: 'C', text: 'The one who keeps things calm' },
+					{ key: 'D', text: 'The one who takes charge' },
+					{ key: 'E', text: 'The one with original ideas' }
+				]
+			},
+			{
+				prompt: 'Pick a color:',
+				answers: [
+					{ key: 'A', text: 'Bright yellow' },
+					{ key: 'B', text: 'Red or pink' },
+					{ key: 'C', text: 'Green' },
+					{ key: 'D', text: 'Orange' },
+					{ key: 'E', text: 'Purple' }
+				]
+			},
+			{
+				prompt: 'If something goes wrong, you:',
+				answers: [
+					{ key: 'A', text: 'Try to make the best of it' },
+					{ key: 'B', text: 'Check if everyone is okay' },
+					{ key: 'C', text: 'Stay calm and go with the flow' },
+					{ key: 'D', text: 'Face it directly' },
+					{ key: 'E', text: 'Think of a creative solution' }
+				]
+			},
+			{
+				prompt: 'What sounds most like you?',
+				answers: [
+					{ key: 'A', text: 'I like making people laugh' },
+					{ key: 'B', text: 'I care a lot about my friends' },
+					{ key: 'C', text: 'I don’t like drama' },
+					{ key: 'D', text: 'I like a challenge' },
+					{ key: 'E', text: 'I like being different' }
+				]
+			},
+			{
+				prompt: 'Choose a snack:',
+				answers: [
+					{ key: 'A', text: 'Popcorn' },
+					{ key: 'B', text: 'Cookies' },
+					{ key: 'C', text: 'Crackers' },
+					{ key: 'D', text: 'Spicy chips' },
+					{ key: 'E', text: 'Something unusual I haven’t tried before' }
+				]
+			},
+			{
+				prompt: 'Your biggest strength is:',
+				answers: [
+					{ key: 'A', text: 'Positivity' },
+					{ key: 'B', text: 'Kindness' },
+					{ key: 'C', text: 'Patience' },
+					{ key: 'D', text: 'Confidence' },
+					{ key: 'E', text: 'Imagination' }
+				]
+			}
+		],
+		results: {
+			A: {
+				title: 'Banana',
+				emoji: '🍌',
+				blurb:
+					'You’re cheerful, funny, and full of good energy. You can make boring moments more fun, and people probably like being around your positive vibe.'
+			},
+			B: {
+				title: 'Strawberry',
+				emoji: '🍓',
+				blurb:
+					'You’re sweet, kind, and caring. You make people feel appreciated and supported. Friends may come to you when they need comfort or advice.'
+			},
+			C: {
+				title: 'Watermelon',
+				emoji: '🍉',
+				blurb:
+					'You’re chill, relaxed, and easy to be around. You don’t like unnecessary drama, and you’re good at helping people calm down.'
+			},
+			D: {
+				title: 'Orange',
+				emoji: '🍊',
+				blurb:
+					'You’re bold, confident, and adventurous. You like trying new things and facing challenges. You bring excitement and courage to your group.'
+			},
+			E: {
+				title: 'Grape',
+				emoji: '🍇',
+				blurb:
+					'You’re creative, unique, and interesting. You have your own style and ideas, and you’re not afraid to be a little different.'
+			}
+		},
+		ties: {
+			AB: { title: 'Mango', emoji: '🥭', blurb: 'Cheerful, sweet, and lovable.' },
+			AC: { title: 'Pineapple', emoji: '🍍', blurb: 'Fun, relaxed, and bright.' },
+			AD: { title: 'Lemon', emoji: '🍋', blurb: 'Bold, energetic, and sharp.' },
+			BC: { title: 'Peach', emoji: '🍑', blurb: 'Gentle, calm, and kind.' },
+			BE: { title: 'Cherry', emoji: '🍒', blurb: 'Sweet, creative, and memorable.' },
+			CE: { title: 'Kiwi', emoji: '🥝', blurb: 'Chill, unique, and quietly cool.' },
+			DE: { title: 'Dragon Fruit', emoji: '🐉', blurb: 'Bold, creative, and one-of-a-kind.' }
+		}
+	},
+	{
+		id: 'songgenre',
+		name: 'What Song Genre Are You?',
+		emoji: '🎶',
+		tagline: 'Turn up the volume on your personality.',
+		accent: '#7B5BE6',
+		questions: [
+			{
+				prompt: 'Your friends would describe you as:',
+				answers: [
+					{ key: 'A', text: 'Energetic and confident' },
+					{ key: 'B', text: 'Emotional and thoughtful' },
+					{ key: 'C', text: 'Chill and easygoing' },
+					{ key: 'D', text: 'Creative and different' },
+					{ key: 'E', text: 'Fun and dramatic' }
+				]
+			},
+			{
+				prompt: 'Your perfect weekend would be:',
+				answers: [
+					{ key: 'A', text: 'Going somewhere exciting' },
+					{ key: 'B', text: 'Having deep talks or relaxing alone' },
+					{ key: 'C', text: 'Hanging out with friends with no big plan' },
+					{ key: 'D', text: 'Making something: art, videos, writing, music, etc.' },
+					{ key: 'E', text: 'Doing something loud, fun, or unforgettable' }
+				]
+			},
+			{
+				prompt: 'When you’re in a group, you usually:',
+				answers: [
+					{ key: 'A', text: 'Bring the hype' },
+					{ key: 'B', text: 'Notice how everyone feels' },
+					{ key: 'C', text: 'Keep things relaxed' },
+					{ key: 'D', text: 'Come up with unique ideas' },
+					{ key: 'E', text: 'Make people laugh or entertain them' }
+				]
+			},
+			{
+				prompt: 'Pick a lyric vibe:',
+				answers: [
+					{ key: 'A', text: '“I’m unstoppable.”' },
+					{ key: 'B', text: '“I feel everything.”' },
+					{ key: 'C', text: '“Life is better when I’m relaxed.”' },
+					{ key: 'D', text: '“I see the world differently.”' },
+					{ key: 'E', text: '“Let’s make this moment legendary.”' }
+				]
+			},
+			{
+				prompt: 'If something goes wrong, you:',
+				answers: [
+					{ key: 'A', text: 'Push through it' },
+					{ key: 'B', text: 'Think about it a lot' },
+					{ key: 'C', text: 'Stay calm and move on' },
+					{ key: 'D', text: 'Turn it into inspiration' },
+					{ key: 'E', text: 'Make a joke or turn it into a story' }
+				]
+			},
+			{
+				prompt: 'Choose a color:',
+				answers: [
+					{ key: 'A', text: 'Red' },
+					{ key: 'B', text: 'Dark blue' },
+					{ key: 'C', text: 'Light green' },
+					{ key: 'D', text: 'Purple' },
+					{ key: 'E', text: 'Gold' }
+				]
+			},
+			{
+				prompt: 'Your dream concert would be:',
+				answers: [
+					{ key: 'A', text: 'Huge lights, big bass, everyone jumping' },
+					{ key: 'B', text: 'A smaller show where the lyrics really matter' },
+					{ key: 'C', text: 'Outdoor festival with chill music' },
+					{ key: 'D', text: 'A weird, artsy concert with cool visuals' },
+					{ key: 'E', text: 'A super dramatic performance with costumes and effects' }
+				]
+			},
+			{
+				prompt: 'Which word fits you best?',
+				answers: [
+					{ key: 'A', text: 'Bold' },
+					{ key: 'B', text: 'Deep' },
+					{ key: 'C', text: 'Relaxed' },
+					{ key: 'D', text: 'Original' },
+					{ key: 'E', text: 'Expressive' }
+				]
+			}
+		],
+		results: {
+			A: {
+				title: 'Pop',
+				emoji: '🎤',
+				blurb:
+					'You’re energetic, confident, and fun to be around. You like excitement and good vibes, and you know how to bring people together.'
+			},
+			B: {
+				title: 'R&B / Soul',
+				emoji: '🎙️',
+				blurb:
+					'You’re thoughtful, emotional, and caring. You feel things deeply and probably understand people better than they realize.'
+			},
+			C: {
+				title: 'Reggae / Chill Music',
+				emoji: '🌴',
+				blurb:
+					'You’re calm, relaxed, and easygoing. You don’t like unnecessary drama, and you help people feel more peaceful.'
+			},
+			D: {
+				title: 'Alternative / Indie',
+				emoji: '🎸',
+				blurb:
+					'You’re creative, unique, and original. You like things that feel different, interesting, or meaningful. You have your own style.'
+			},
+			E: {
+				title: 'Musical Theater / Show Tunes',
+				emoji: '🎭',
+				blurb:
+					'You’re expressive, fun, and dramatic in the best way. You know how to make moments memorable and probably have a big imagination.'
+			}
+		},
+		ties: {
+			AB: { title: 'Hip-Hop', emoji: '🎧', blurb: 'Confident, expressive, and honest.' },
+			AC: { title: 'Dance/Electronic', emoji: '🪩', blurb: 'Upbeat, fun, and energetic.' },
+			AD: { title: 'K-Pop', emoji: '💖', blurb: 'Bold, creative, and full of style.' },
+			AE: { title: 'Rock', emoji: '🤘', blurb: 'Loud, powerful, and exciting.' },
+			BC: { title: 'Acoustic', emoji: '🎵', blurb: 'Calm, emotional, and real.' },
+			BD: { title: 'Lo-fi', emoji: '🎚️', blurb: 'Thoughtful, creative, and chill.' },
+			CD: { title: 'Indie Pop', emoji: '🎹', blurb: 'Relaxed, unique, and catchy.' },
+			DE: {
+				title: 'Experimental Pop',
+				emoji: '🌈',
+				blurb: 'Creative, dramatic, and one-of-a-kind.'
+			}
+		}
+	},
+	{
+		id: 'booktype',
+		name: 'What Type of Book Are You?',
+		emoji: '📚',
+		tagline: 'Every reader is a story. Which one are you?',
+		accent: '#C0843C',
+		questions: [
+			{
+				prompt: 'Your friends would describe you as:',
+				answers: [
+					{ key: 'A', text: 'Brave and adventurous' },
+					{ key: 'B', text: 'Thoughtful and emotional' },
+					{ key: 'C', text: 'Funny and energetic' },
+					{ key: 'D', text: 'Curious and clever' },
+					{ key: 'E', text: 'Creative and mysterious' }
+				]
+			},
+			{
+				prompt: 'Your perfect day would be:',
+				answers: [
+					{ key: 'A', text: 'Going on an adventure or trying something new' },
+					{ key: 'B', text: 'Having a cozy, meaningful day with people you care about' },
+					{ key: 'C', text: 'Laughing with friends and doing something fun' },
+					{ key: 'D', text: 'Solving puzzles, learning facts, or exploring interesting ideas' },
+					{ key: 'E', text: 'Creating art, stories, videos, or spending time in your imagination' }
+				]
+			},
+			{
+				prompt: 'If you were the main character, your story would start with:',
+				answers: [
+					{ key: 'A', text: 'A map, a mission, and a dangerous journey' },
+					{ key: 'B', text: 'A big feeling or important life change' },
+					{ key: 'C', text: 'A hilarious misunderstanding' },
+					{ key: 'D', text: 'A strange clue that needs solving' },
+					{ key: 'E', text: 'A secret door to another world' }
+				]
+			},
+			{
+				prompt: 'In a group project, you are usually:',
+				answers: [
+					{ key: 'A', text: 'The person ready to take action' },
+					{ key: 'B', text: 'The person who understands everyone’s feelings' },
+					{ key: 'C', text: 'The person who keeps things fun' },
+					{ key: 'D', text: 'The person who notices details and asks good questions' },
+					{ key: 'E', text: 'The person with imaginative ideas' }
+				]
+			},
+			{
+				prompt: 'Pick a setting:',
+				answers: [
+					{ key: 'A', text: 'A jungle, mountain, ocean, or lost city' },
+					{ key: 'B', text: 'A small town, home, school, or cozy place' },
+					{ key: 'C', text: 'A chaotic school trip or funny neighborhood' },
+					{ key: 'D', text: 'A museum, old mansion, lab, or detective office' },
+					{ key: 'E', text: 'A castle, enchanted forest, spaceship, or magical city' }
+				]
+			},
+			{
+				prompt: 'What kind of problem would you be best at handling?',
+				answers: [
+					{ key: 'A', text: 'A challenge that needs courage' },
+					{ key: 'B', text: 'A friendship or family problem' },
+					{ key: 'C', text: 'An awkward situation' },
+					{ key: 'D', text: 'A mystery that needs solving' },
+					{ key: 'E', text: 'A magical or impossible problem' }
+				]
+			},
+			{
+				prompt: 'Choose a quote vibe:',
+				answers: [
+					{ key: 'A', text: '“Let’s go before it’s too late!”' },
+					{ key: 'B', text: '“Some moments change who you are.”' },
+					{ key: 'C', text: '“Well, that went terribly.”' },
+					{ key: 'D', text: '“The clue was there the whole time.”' },
+					{ key: 'E', text: '“Nothing is impossible here.”' }
+				]
+			},
+			{
+				prompt: 'Your biggest strength is:',
+				answers: [
+					{ key: 'A', text: 'Courage' },
+					{ key: 'B', text: 'Empathy' },
+					{ key: 'C', text: 'Humor' },
+					{ key: 'D', text: 'Intelligence' },
+					{ key: 'E', text: 'Imagination' }
+				]
+			}
+		],
+		results: {
+			A: {
+				title: 'Adventure Book',
+				emoji: '🗺️',
+				blurb:
+					'You’re brave, energetic, and ready for new experiences. You like action, challenges, and stories where something exciting is always happening.'
+			},
+			B: {
+				title: 'Realistic Fiction',
+				emoji: '📖',
+				blurb:
+					'You’re thoughtful, caring, and emotionally aware. You understand people and feelings, and you probably enjoy stories that feel real and meaningful.'
+			},
+			C: {
+				title: 'Comedy Book',
+				emoji: '😂',
+				blurb:
+					'You’re fun, playful, and good at making people smile. You can turn awkward moments into great stories, and your energy makes life more entertaining.'
+			},
+			D: {
+				title: 'Mystery Book',
+				emoji: '🔎',
+				blurb:
+					'You’re curious, clever, and observant. You notice details other people miss and enjoy figuring things out. Your brain is basically a detective notebook.'
+			},
+			E: {
+				title: 'Fantasy/Sci-Fi Book',
+				emoji: '🐉',
+				blurb:
+					'You’re imaginative, creative, and full of big ideas. You like worlds that are different from everyday life and probably enjoy asking “what if?”'
+			}
+		},
+		ties: {
+			AB: {
+				title: 'Historical Fiction',
+				emoji: '🏛️',
+				blurb: 'Meaningful, brave, and full of big moments.'
+			},
+			AC: { title: 'Action Comedy', emoji: '💥', blurb: 'Adventurous, funny, and exciting.' },
+			AD: { title: 'Spy Thriller', emoji: '🕵️', blurb: 'Daring, clever, and sneaky-smart.' },
+			AE: { title: 'Epic Fantasy', emoji: '⚔️', blurb: 'Adventurous, imaginative, and bold.' },
+			BC: { title: 'Slice of Life Comedy', emoji: '☕', blurb: 'Realistic, warm, and funny.' },
+			BD: { title: 'Drama Mystery', emoji: '🎭', blurb: 'Emotional, thoughtful, and curious.' },
+			BE: { title: 'Magical Realism', emoji: '✨', blurb: 'Meaningful, creative, and dreamy.' },
+			CD: { title: 'Funny Mystery', emoji: '🃏', blurb: 'Clever, chaotic, and entertaining.' },
+			CE: { title: 'Wacky Fantasy', emoji: '🦄', blurb: 'Silly, imaginative, and unpredictable.' },
+			DE: { title: 'Sci-Fi Mystery', emoji: '🚀', blurb: 'Curious, creative, and mind-bending.' }
+		}
+	},
+	{
+		id: 'superpower',
+		name: 'What Superpower Would You Have?',
+		emoji: '🦸',
+		tagline: 'Eight questions to unlock your hidden ability.',
+		accent: '#4D9DE0',
+		questions: [
+			{
+				prompt: 'Your friends would describe you as:',
+				answers: [
+					{ key: 'A', text: 'Brave and energetic' },
+					{ key: 'B', text: 'Smart and observant' },
+					{ key: 'C', text: 'Caring and protective' },
+					{ key: 'D', text: 'Creative and unpredictable' },
+					{ key: 'E', text: 'Calm and independent' }
+				]
+			},
+			{
+				prompt: 'If there was a problem, you would:',
+				answers: [
+					{ key: 'A', text: 'Jump in and take action' },
+					{ key: 'B', text: 'Think carefully and find the best plan' },
+					{ key: 'C', text: 'Help people feel safe and supported' },
+					{ key: 'D', text: 'Try a weird but clever solution' },
+					{ key: 'E', text: 'Stay quiet and handle it your own way' }
+				]
+			},
+			{
+				prompt: 'Your ideal mission would be:',
+				answers: [
+					{ key: 'A', text: 'Stopping a runaway train' },
+					{ key: 'B', text: 'Solving a mystery before time runs out' },
+					{ key: 'C', text: 'Rescuing people during a disaster' },
+					{ key: 'D', text: 'Exploring another dimension' },
+					{ key: 'E', text: 'Sneaking into a secret base' }
+				]
+			},
+			{
+				prompt: 'In a team, you are usually:',
+				answers: [
+					{ key: 'A', text: 'The fearless one' },
+					{ key: 'B', text: 'The strategist' },
+					{ key: 'C', text: 'The protector' },
+					{ key: 'D', text: 'The wild-card idea person' },
+					{ key: 'E', text: 'The quiet expert' }
+				]
+			},
+			{
+				prompt: 'Pick a superhero outfit color:',
+				answers: [
+					{ key: 'A', text: 'Red' },
+					{ key: 'B', text: 'Blue' },
+					{ key: 'C', text: 'Green' },
+					{ key: 'D', text: 'Purple' },
+					{ key: 'E', text: 'Black' }
+				]
+			},
+			{
+				prompt: 'What would annoy you most?',
+				answers: [
+					{ key: 'A', text: 'Feeling weak or helpless' },
+					{ key: 'B', text: 'People ignoring obvious clues' },
+					{ key: 'C', text: 'Someone being treated unfairly' },
+					{ key: 'D', text: 'Boring rules' },
+					{ key: 'E', text: 'Too much attention' }
+				]
+			},
+			{
+				prompt: 'Choose a place to train:',
+				answers: [
+					{ key: 'A', text: 'A giant obstacle course' },
+					{ key: 'B', text: 'A high-tech lab' },
+					{ key: 'C', text: 'A peaceful forest' },
+					{ key: 'D', text: 'A floating magical island' },
+					{ key: 'E', text: 'A rooftop at night' }
+				]
+			},
+			{
+				prompt: 'Your biggest strength is:',
+				answers: [
+					{ key: 'A', text: 'Courage' },
+					{ key: 'B', text: 'Intelligence' },
+					{ key: 'C', text: 'Kindness' },
+					{ key: 'D', text: 'Imagination' },
+					{ key: 'E', text: 'Focus' }
+				]
+			}
+		],
+		results: {
+			A: {
+				title: 'Super Strength',
+				emoji: '💪',
+				blurb:
+					'You’re bold, brave, and ready to face challenges head-on. You’d be the hero who protects people by standing strong when things get tough.'
+			},
+			B: {
+				title: 'Mind Reading',
+				emoji: '🧠',
+				blurb:
+					'You’re clever, observant, and good at understanding what’s really going on. You’d use your power to solve problems, uncover secrets, and help people communicate.'
+			},
+			C: {
+				title: 'Healing Powers',
+				emoji: '✨',
+				blurb:
+					'You’re caring, loyal, and protective. You’d be the hero people trust when they need help, comfort, or someone who truly cares.'
+			},
+			D: {
+				title: 'Teleportation',
+				emoji: '🌀',
+				blurb:
+					'You’re creative, adventurous, and unpredictable. You’d love being able to go anywhere instantly and escape boring situations whenever you want.'
+			},
+			E: {
+				title: 'Invisibility',
+				emoji: '🫥',
+				blurb:
+					'You’re calm, independent, and focused. You don’t always need attention, and you’d be great at sneaky missions, observing details, and solving problems quietly.'
+			}
+		},
+		ties: {
+			AB: { title: 'Super Speed', emoji: '⚡', blurb: 'Brave, quick-thinking, and sharp.' },
+			AC: { title: 'Force Field', emoji: '🛡️', blurb: 'Protective, strong, and loyal.' },
+			AD: { title: 'Shape-Shifting', emoji: '🦎', blurb: 'Bold, creative, and adaptable.' },
+			AE: { title: 'Night Vision', emoji: '🌙', blurb: 'Brave, quiet, and focused.' },
+			BC: { title: 'Empathy Power', emoji: '💞', blurb: 'Smart, caring, and emotionally aware.' },
+			BD: { title: 'Time Control', emoji: '⏳', blurb: 'Clever, creative, and powerful.' },
+			BE: { title: 'Telekinesis', emoji: '🔮', blurb: 'Focused, intelligent, and mysterious.' },
+			CD: { title: 'Nature Control', emoji: '🌿', blurb: 'Caring, creative, and connected.' },
+			CE: { title: 'Animal Communication', emoji: '🐾', blurb: 'Gentle, quiet, and trustworthy.' },
+			DE: { title: 'Portal Power', emoji: '🌌', blurb: 'Imaginative, independent, and secretive.' }
+		}
+	},
+	{
+		id: 'magicalanimal',
+		name: 'What Magical Animal Are You?',
+		emoji: '🐉',
+		tagline: 'Discover the legendary beast within.',
+		accent: '#9B5DE5',
+		questions: [
+			{
+				prompt: 'Your friends would describe you as:',
+				answers: [
+					{ key: 'A', text: 'Brave and powerful' },
+					{ key: 'B', text: 'Kind and hopeful' },
+					{ key: 'C', text: 'Mysterious and independent' },
+					{ key: 'D', text: 'Wise and observant' },
+					{ key: 'E', text: 'Playful and curious' }
+				]
+			},
+			{
+				prompt: 'Your perfect adventure would be:',
+				answers: [
+					{ key: 'A', text: 'Climbing a volcano or exploring a dangerous cave' },
+					{ key: 'B', text: 'Finding a hidden meadow full of glowing flowers' },
+					{ key: 'C', text: 'Sneaking through an enchanted forest at midnight' },
+					{ key: 'D', text: 'Solving an ancient riddle in a forgotten library' },
+					{ key: 'E', text: 'Following a sparkling trail to a secret world' }
+				]
+			},
+			{
+				prompt: 'In a group, you are usually:',
+				answers: [
+					{ key: 'A', text: 'The protector' },
+					{ key: 'B', text: 'The peacemaker' },
+					{ key: 'C', text: 'The quiet one with a secret plan' },
+					{ key: 'D', text: 'The thinker' },
+					{ key: 'E', text: 'The one making everything more fun' }
+				]
+			},
+			{
+				prompt: 'Pick a magical power:',
+				answers: [
+					{ key: 'A', text: 'Breathing fire' },
+					{ key: 'B', text: 'Healing magic' },
+					{ key: 'C', text: 'Shadow walking' },
+					{ key: 'D', text: 'Seeing the future' },
+					{ key: 'E', text: 'Turning invisible for pranks or exploring' }
+				]
+			},
+			{
+				prompt: 'Choose a place to live:',
+				answers: [
+					{ key: 'A', text: 'A mountain cave full of treasure' },
+					{ key: 'B', text: 'A peaceful forest clearing' },
+					{ key: 'C', text: 'A moonlit castle ruin' },
+					{ key: 'D', text: 'A tower filled with books and maps' },
+					{ key: 'E', text: 'A bright hidden village with portals everywhere' }
+				]
+			},
+			{
+				prompt: 'What annoys you most?',
+				answers: [
+					{ key: 'A', text: 'People underestimating you' },
+					{ key: 'B', text: 'Cruelty or unfairness' },
+					{ key: 'C', text: 'Being forced to explain yourself' },
+					{ key: 'D', text: 'People not listening to good advice' },
+					{ key: 'E', text: 'Being bored' }
+				]
+			},
+			{
+				prompt: 'Pick a color:',
+				answers: [
+					{ key: 'A', text: 'Red or gold' },
+					{ key: 'B', text: 'White or pastel pink' },
+					{ key: 'C', text: 'Black or silver' },
+					{ key: 'D', text: 'Blue or bronze' },
+					{ key: 'E', text: 'Green or rainbow' }
+				]
+			},
+			{
+				prompt: 'Your biggest strength is:',
+				answers: [
+					{ key: 'A', text: 'Courage' },
+					{ key: 'B', text: 'Kindness' },
+					{ key: 'C', text: 'Independence' },
+					{ key: 'D', text: 'Wisdom' },
+					{ key: 'E', text: 'Imagination' }
+				]
+			}
+		],
+		results: {
+			A: {
+				title: 'Dragon',
+				emoji: '🐉',
+				blurb:
+					'You’re bold, brave, and powerful. You protect the people you care about and don’t back down easily. You have a strong personality and big energy.'
+			},
+			B: {
+				title: 'Unicorn',
+				emoji: '🦄',
+				blurb:
+					'You’re kind, hopeful, and gentle. You bring comfort and positivity to others. You probably care a lot about fairness, friendship, and making the world better.'
+			},
+			C: {
+				title: 'Griffin',
+				emoji: '🦅',
+				blurb:
+					'You’re mysterious, independent, and strong. You like doing things your own way and may not reveal everything you’re thinking. People respect your confidence.'
+			},
+			D: {
+				title: 'Phoenix',
+				emoji: '🔥',
+				blurb:
+					'You’re wise, thoughtful, and resilient. Even when things are difficult, you can rise again and keep going. You learn from experiences and come back stronger.'
+			},
+			E: {
+				title: 'Fairy',
+				emoji: '🧚',
+				blurb:
+					'You’re playful, curious, and creative. You bring magic into everyday life through your imagination and fun ideas. You probably love discovering new things.'
+			}
+		},
+		ties: {
+			AB: { title: 'Pegasus', emoji: '🐴', blurb: 'Brave, kind, and free-spirited.' },
+			AC: { title: 'Chimera', emoji: '🦁', blurb: 'Powerful, mysterious, and intense.' },
+			AD: { title: 'Firebird', emoji: '🦚', blurb: 'Bold, wise, and unstoppable.' },
+			AE: { title: 'Baby Dragon', emoji: '🐲', blurb: 'Adventurous, playful, and fiery.' },
+			BC: { title: 'Moon Unicorn', emoji: '🌙', blurb: 'Gentle, mysterious, and graceful.' },
+			BD: { title: 'Celestial Deer', emoji: '🦌', blurb: 'Kind, wise, and peaceful.' },
+			BE: { title: 'Pixie', emoji: '🧚‍♀️', blurb: 'Sweet, playful, and magical.' },
+			CD: { title: 'Sphinx', emoji: '🐱', blurb: 'Mysterious, wise, and clever.' },
+			CE: { title: 'Shadow Fairy', emoji: '🌑', blurb: 'Curious, sneaky, and creative.' },
+			DE: { title: 'Time Sprite', emoji: '⏳', blurb: 'Imaginative, clever, and magical.' }
+		}
+	},
+	{
+		id: 'cat',
+		name: 'What Breed of Cat Are You?',
+		emoji: '🐱',
+		tagline: 'Find the feline that matches your vibe.',
+		accent: '#A487C3',
+		questions: [
+			{
+				prompt: 'Your friends would describe you as:',
+				answers: [
+					{ key: 'A', text: 'Fancy and confident' },
+					{ key: 'B', text: 'Friendly and playful' },
+					{ key: 'C', text: 'Calm and gentle' },
+					{ key: 'D', text: 'Curious and energetic' },
+					{ key: 'E', text: 'Mysterious and independent' }
+				]
+			},
+			{
+				prompt: 'Your perfect afternoon would be:',
+				answers: [
+					{ key: 'A', text: 'Dressing up, taking photos, or feeling stylish' },
+					{ key: 'B', text: 'Playing games or hanging out with friends' },
+					{ key: 'C', text: 'Reading, relaxing, or being cozy' },
+					{ key: 'D', text: 'Exploring somewhere new' },
+					{ key: 'E', text: 'Spending quiet time alone doing your own thing' }
+				]
+			},
+			{
+				prompt: 'In a group, you usually:',
+				answers: [
+					{ key: 'A', text: 'Stand out without trying' },
+					{ key: 'B', text: 'Make people laugh and join in' },
+					{ key: 'C', text: 'Keep things peaceful' },
+					{ key: 'D', text: 'Ask questions and investigate' },
+					{ key: 'E', text: 'Watch quietly before joining' }
+				]
+			},
+			{
+				prompt: 'Pick a favorite place:',
+				answers: [
+					{ key: 'A', text: 'A fancy room with soft pillows' },
+					{ key: 'B', text: 'A sunny backyard or fun hangout spot' },
+					{ key: 'C', text: 'A cozy blanket fort' },
+					{ key: 'D', text: 'A high shelf, treehouse, or lookout spot' },
+					{ key: 'E', text: 'A quiet corner where nobody bothers you' }
+				]
+			},
+			{
+				prompt: 'If something goes wrong, you:',
+				answers: [
+					{ key: 'A', text: 'Stay confident and act like you meant to do that' },
+					{ key: 'B', text: 'Try to make it fun anyway' },
+					{ key: 'C', text: 'Stay calm and comfort others' },
+					{ key: 'D', text: 'Figure out what happened' },
+					{ key: 'E', text: 'Disappear for a bit and think alone' }
+				]
+			},
+			{
+				prompt: 'Choose a snack:',
+				answers: [
+					{ key: 'A', text: 'Something fancy' },
+					{ key: 'B', text: 'Something sweet' },
+					{ key: 'C', text: 'Something warm and cozy' },
+					{ key: 'D', text: 'Something new you’ve never tried' },
+					{ key: 'E', text: 'Something simple and reliable' }
+				]
+			},
+			{
+				prompt: 'What annoys you most?',
+				answers: [
+					{ key: 'A', text: 'Being ignored' },
+					{ key: 'B', text: 'Boring activities' },
+					{ key: 'C', text: 'Loud drama' },
+					{ key: 'D', text: 'Not knowing the answer' },
+					{ key: 'E', text: 'People not giving you space' }
+				]
+			},
+			{
+				prompt: 'Your biggest strength is:',
+				answers: [
+					{ key: 'A', text: 'Confidence' },
+					{ key: 'B', text: 'Friendliness' },
+					{ key: 'C', text: 'Patience' },
+					{ key: 'D', text: 'Curiosity' },
+					{ key: 'E', text: 'Independence' }
+				]
+			}
+		],
+		results: {
+			A: {
+				title: 'Persian Cat',
+				emoji: '😺',
+				blurb:
+					'You’re stylish, confident, and a little fancy. You know your worth and probably like comfort, beauty, or having your own special vibe.'
+			},
+			B: {
+				title: 'Maine Coon',
+				emoji: '🐾',
+				blurb:
+					'You’re friendly, playful, and fun to be around. Maine Coons are known as “gentle giants,” and you probably bring warm, happy energy to your group.'
+			},
+			C: {
+				title: 'Ragdoll',
+				emoji: '💤',
+				blurb:
+					'You’re calm, gentle, and cozy. You like peaceful spaces and make people feel relaxed. You’re the kind of person others feel safe around.'
+			},
+			D: {
+				title: 'Bengal Cat',
+				emoji: '🐆',
+				blurb:
+					'You’re curious, adventurous, and energetic. You like exploring, learning, and trying new things. Sitting still for too long might not be your favorite.'
+			},
+			E: {
+				title: 'Russian Blue',
+				emoji: '💙',
+				blurb:
+					'You’re independent, thoughtful, and a little mysterious. You may be quiet at first, but you have a strong personality once people know you.'
+			}
+		},
+		ties: {
+			AB: { title: 'Siamese', emoji: '🐈', blurb: 'Confident, social, and expressive.' },
+			AC: { title: 'Birman', emoji: '🐈', blurb: 'Elegant, gentle, and loyal.' },
+			AD: { title: 'Abyssinian', emoji: '🐈', blurb: 'Stylish, curious, and active.' },
+			AE: { title: 'British Shorthair', emoji: '🐈', blurb: 'Classy, calm, and independent.' },
+			BC: { title: 'Scottish Fold', emoji: '🐈', blurb: 'Sweet, friendly, and relaxed.' },
+			BD: { title: 'Savannah Cat', emoji: '🐆', blurb: 'Playful, adventurous, and bold.' },
+			BE: { title: 'Turkish Van', emoji: '🐈', blurb: 'Fun, independent, and surprising.' },
+			CD: {
+				title: 'Norwegian Forest Cat',
+				emoji: '🌲',
+				blurb: 'Calm, curious, and nature-loving.'
+			},
+			CE: { title: 'Chartreux', emoji: '🐈', blurb: 'Quiet, gentle, and loyal.' },
+			DE: { title: 'Sphynx', emoji: '🐈', blurb: 'Unique, curious, and confident.' }
+		}
+	},
+	{
+		id: 'dog',
+		name: 'What Breed of Dog Are You?',
+		emoji: '🐶',
+		tagline: 'Sniff out the pup that matches your personality.',
+		accent: '#D9A066',
+		questions: [
+			{
+				prompt: 'Your friends would describe you as:',
+				answers: [
+					{ key: 'A', text: 'Loyal and protective' },
+					{ key: 'B', text: 'Friendly and energetic' },
+					{ key: 'C', text: 'Smart and focused' },
+					{ key: 'D', text: 'Calm and gentle' },
+					{ key: 'E', text: 'Funny and unique' }
+				]
+			},
+			{
+				prompt: 'Your perfect afternoon would be:',
+				answers: [
+					{ key: 'A', text: 'Spending time with close friends or family' },
+					{ key: 'B', text: 'Running around, playing, or doing something active' },
+					{ key: 'C', text: 'Learning a new skill or working on a goal' },
+					{ key: 'D', text: 'Relaxing somewhere cozy' },
+					{ key: 'E', text: 'Doing something random and silly' }
+				]
+			},
+			{
+				prompt: 'In a group, you usually:',
+				answers: [
+					{ key: 'A', text: 'Look out for everyone' },
+					{ key: 'B', text: 'Bring the excitement' },
+					{ key: 'C', text: 'Help organize or solve problems' },
+					{ key: 'D', text: 'Keep the peace' },
+					{ key: 'E', text: 'Make people laugh' }
+				]
+			},
+			{
+				prompt: 'Pick a favorite place:',
+				answers: [
+					{ key: 'A', text: 'Home with people you care about' },
+					{ key: 'B', text: 'A park, field, or beach' },
+					{ key: 'C', text: 'A classroom, club, workshop, or challenge area' },
+					{ key: 'D', text: 'A cozy couch or quiet room' },
+					{ key: 'E', text: 'Anywhere interesting or unexpected' }
+				]
+			},
+			{
+				prompt: 'If something goes wrong, you:',
+				answers: [
+					{ key: 'A', text: 'Protect your friends and stand up for what’s right' },
+					{ key: 'B', text: 'Try to stay positive and keep moving' },
+					{ key: 'C', text: 'Think through the best solution' },
+					{ key: 'D', text: 'Stay calm and comfort others' },
+					{ key: 'E', text: 'Make a joke, then figure it out' }
+				]
+			},
+			{
+				prompt: 'Choose a snack:',
+				answers: [
+					{ key: 'A', text: 'A classic favorite' },
+					{ key: 'B', text: 'Something you can eat fast before going back to fun' },
+					{ key: 'C', text: 'Something healthy or energizing' },
+					{ key: 'D', text: 'Something warm and comforting' },
+					{ key: 'E', text: 'Something weird but tasty' }
+				]
+			},
+			{
+				prompt: 'What annoys you most?',
+				answers: [
+					{ key: 'A', text: 'People being unfair to someone you care about' },
+					{ key: 'B', text: 'Sitting still too long' },
+					{ key: 'C', text: 'Confusing instructions' },
+					{ key: 'D', text: 'Loud drama' },
+					{ key: 'E', text: 'Being expected to act “normal” all the time' }
+				]
+			},
+			{
+				prompt: 'Your biggest strength is:',
+				answers: [
+					{ key: 'A', text: 'Loyalty' },
+					{ key: 'B', text: 'Energy' },
+					{ key: 'C', text: 'Intelligence' },
+					{ key: 'D', text: 'Gentleness' },
+					{ key: 'E', text: 'Humor' }
+				]
+			}
+		],
+		results: {
+			A: {
+				title: 'German Shepherd',
+				emoji: '🐕‍🦺',
+				blurb:
+					'You’re loyal, brave, and protective. People can count on you, and you care deeply about your friends and family. You’re the kind of person who stands up for others.'
+			},
+			B: {
+				title: 'Golden Retriever',
+				emoji: '🐕',
+				blurb:
+					'You’re friendly, energetic, and positive. You bring happiness into the room and probably make friends pretty easily. You’re fun, warm, and easy to like.'
+			},
+			C: {
+				title: 'Border Collie',
+				emoji: '🐾',
+				blurb:
+					'You’re smart, focused, and hardworking. You like challenges and are good at figuring things out. You might enjoy learning, strategy games, sports, or improving at a skill.'
+			},
+			D: {
+				title: 'Cavalier King Charles Spaniel',
+				emoji: '🐶',
+				blurb:
+					'You’re gentle, calm, and comforting. You’re good at making others feel safe and relaxed. You probably care a lot about peace, kindness, and cozy vibes.'
+			},
+			E: {
+				title: 'Corgi',
+				emoji: '🦊',
+				blurb:
+					'You’re funny, unique, and full of personality. You may be silly, bold, or a little dramatic in the best way. People probably remember you because you bring fun energy.'
+			}
+		},
+		ties: {
+			AB: { title: 'Labrador Retriever', emoji: '🐕', blurb: 'Loyal, friendly, and playful.' },
+			AC: { title: 'Doberman', emoji: '🐕‍🦺', blurb: 'Protective, smart, and serious.' },
+			AD: { title: 'Bernese Mountain Dog', emoji: '🏔️', blurb: 'Loyal, gentle, and calm.' },
+			AE: { title: 'Boxer', emoji: '🥊', blurb: 'Protective, funny, and energetic.' },
+			BC: {
+				title: 'Australian Shepherd',
+				emoji: '🐑',
+				blurb: 'Energetic, smart, and adventurous.'
+			},
+			BD: { title: 'Beagle', emoji: '🐶', blurb: 'Friendly, gentle, and curious.' },
+			BE: { title: 'Dachshund', emoji: '🌭', blurb: 'Playful, funny, and bold.' },
+			CD: { title: 'Poodle', emoji: '🐩', blurb: 'Smart, gentle, and stylish.' },
+			CE: { title: 'Shiba Inu', emoji: '🦴', blurb: 'Clever, independent, and full of attitude.' },
+			DE: { title: 'Pug', emoji: '🐶', blurb: 'Cozy, funny, and lovable.' }
+		}
+	},
+	{
+		id: 'forestanimal',
+		name: 'What Forest Animal Are You?',
+		emoji: '🌲',
+		tagline: 'Wander into the woods and find your wild side.',
+		accent: '#5C8A4A',
+		questions: [
+			{
+				prompt: 'Your friends would describe you as:',
+				answers: [
+					{ key: 'A', text: 'Brave and protective' },
+					{ key: 'B', text: 'Clever and curious' },
+					{ key: 'C', text: 'Gentle and peaceful' },
+					{ key: 'D', text: 'Energetic and playful' },
+					{ key: 'E', text: 'Quiet and mysterious' }
+				]
+			},
+			{
+				prompt: 'Your perfect afternoon would be:',
+				answers: [
+					{ key: 'A', text: 'Going on a big adventure' },
+					{ key: 'B', text: 'Exploring somewhere new or solving a puzzle' },
+					{ key: 'C', text: 'Relaxing in a calm, cozy place' },
+					{ key: 'D', text: 'Running around, playing games, or being active' },
+					{ key: 'E', text: 'Spending time alone thinking, reading, or creating' }
+				]
+			},
+			{
+				prompt: 'In a group, you usually:',
+				answers: [
+					{ key: 'A', text: 'Look out for everyone' },
+					{ key: 'B', text: 'Come up with smart ideas' },
+					{ key: 'C', text: 'Keep things calm' },
+					{ key: 'D', text: 'Bring the fun' },
+					{ key: 'E', text: 'Watch quietly and notice details' }
+				]
+			},
+			{
+				prompt: 'Pick a forest home:',
+				answers: [
+					{ key: 'A', text: 'A hidden cave' },
+					{ key: 'B', text: 'A den with secret tunnels' },
+					{ key: 'C', text: 'A peaceful meadow' },
+					{ key: 'D', text: 'A tree branch high above the ground' },
+					{ key: 'E', text: 'A shadowy spot under tall trees' }
+				]
+			},
+			{
+				prompt: 'If something goes wrong, you:',
+				answers: [
+					{ key: 'A', text: 'Stand strong and protect others' },
+					{ key: 'B', text: 'Think fast and find a clever solution' },
+					{ key: 'C', text: 'Stay calm and avoid drama' },
+					{ key: 'D', text: 'Move quickly and try something new' },
+					{ key: 'E', text: 'Observe first, then act carefully' }
+				]
+			},
+			{
+				prompt: 'Choose a snack:',
+				answers: [
+					{ key: 'A', text: 'Trail mix' },
+					{ key: 'B', text: 'Berries' },
+					{ key: 'C', text: 'Fresh fruit' },
+					{ key: 'D', text: 'Crunchy snacks' },
+					{ key: 'E', text: 'Something simple and quiet' }
+				]
+			},
+			{
+				prompt: 'What annoys you most?',
+				answers: [
+					{ key: 'A', text: 'People being unfair' },
+					{ key: 'B', text: 'Being tricked or confused' },
+					{ key: 'C', text: 'Loud chaos' },
+					{ key: 'D', text: 'Being bored' },
+					{ key: 'E', text: 'Too much attention' }
+				]
+			},
+			{
+				prompt: 'Your biggest strength is:',
+				answers: [
+					{ key: 'A', text: 'Courage' },
+					{ key: 'B', text: 'Cleverness' },
+					{ key: 'C', text: 'Kindness' },
+					{ key: 'D', text: 'Energy' },
+					{ key: 'E', text: 'Focus' }
+				]
+			}
+		],
+		results: {
+			A: {
+				title: 'Bear',
+				emoji: '🐻',
+				blurb:
+					'You’re brave, protective, and strong-hearted. You care about your people and can be very loyal. You may seem tough, but you probably have a softer side too.'
+			},
+			B: {
+				title: 'Fox',
+				emoji: '🦊',
+				blurb:
+					'You’re clever, curious, and quick-thinking. You notice things other people miss and can solve problems in creative ways. You have a smart, sneaky-cool vibe.'
+			},
+			C: {
+				title: 'Deer',
+				emoji: '🦌',
+				blurb:
+					'You’re gentle, peaceful, and kind. You don’t like unnecessary drama, and you’re good at making people feel calm. You have a quiet strength.'
+			},
+			D: {
+				title: 'Squirrel',
+				emoji: '🐿️',
+				blurb:
+					'You’re energetic, playful, and fun. You probably like being active, joking around, or jumping between different ideas. You bring movement and excitement to the group.'
+			},
+			E: {
+				title: 'Owl',
+				emoji: '🦉',
+				blurb:
+					'You’re quiet, observant, and thoughtful. You may not always be the loudest person, but you understand a lot. You’re wise, focused, and mysterious in a cool way.'
+			}
+		},
+		ties: {
+			AB: { title: 'Wolf', emoji: '🐺', blurb: 'Brave, clever, and loyal.' },
+			AC: { title: 'Moose', emoji: '🫎', blurb: 'Strong, calm, and gentle.' },
+			AD: { title: 'Raccoon', emoji: '🦝', blurb: 'Bold, playful, and mischievous.' },
+			AE: { title: 'Lynx', emoji: '🐱', blurb: 'Protective, quiet, and powerful.' },
+			BC: { title: 'Rabbit', emoji: '🐰', blurb: 'Gentle, quick, and curious.' },
+			BD: { title: 'Chipmunk', emoji: '🐿️', blurb: 'Clever, energetic, and fun.' },
+			BE: { title: 'Raven', emoji: '🐦‍⬛', blurb: 'Smart, mysterious, and observant.' },
+			CD: { title: 'Hedgehog', emoji: '🦔', blurb: 'Sweet, playful, and cozy.' },
+			CE: { title: 'Moth', emoji: '🦋', blurb: 'Quiet, gentle, and dreamy.' },
+			DE: { title: 'Bat', emoji: '🦇', blurb: 'Energetic, mysterious, and unique.' }
+		}
+	},
+	{
+		id: 'career',
+		name: 'What Future Career Fits You?',
+		emoji: '💼',
+		tagline: 'Just for fun — your real future can always change.',
+		accent: '#3C9D9B',
+		questions: [
+			{
+				prompt: 'Your friends would describe you as:',
+				answers: [
+					{ key: 'A', text: 'Creative and imaginative' },
+					{ key: 'B', text: 'Helpful and caring' },
+					{ key: 'C', text: 'Smart and curious' },
+					{ key: 'D', text: 'Confident and organized' },
+					{ key: 'E', text: 'Active and adventurous' }
+				]
+			},
+			{
+				prompt: 'Your favorite kind of school project is:',
+				answers: [
+					{ key: 'A', text: 'Art, writing, videos, or design' },
+					{ key: 'B', text: 'Helping people or working in a group' },
+					{ key: 'C', text: 'Science, math, research, or puzzles' },
+					{ key: 'D', text: 'Planning, presenting, or leading' },
+					{ key: 'E', text: 'Building, moving, exploring, or hands-on work' }
+				]
+			},
+			{
+				prompt: 'If you had a free afternoon, you would rather:',
+				answers: [
+					{ key: 'A', text: 'Make something cool' },
+					{ key: 'B', text: 'Spend time helping someone or hanging out with friends' },
+					{ key: 'C', text: 'Learn about something interesting' },
+					{ key: 'D', text: 'Work on a goal or start a plan' },
+					{ key: 'E', text: 'Go outside, play sports, or try something new' }
+				]
+			},
+			{
+				prompt: 'In a group project, you are usually:',
+				answers: [
+					{ key: 'A', text: 'The idea person' },
+					{ key: 'B', text: 'The teammate who makes sure everyone feels included' },
+					{ key: 'C', text: 'The problem-solver' },
+					{ key: 'D', text: 'The leader or organizer' },
+					{ key: 'E', text: 'The person who gets things done physically' }
+				]
+			},
+			{
+				prompt: 'Pick a tool:',
+				answers: [
+					{ key: 'A', text: 'Camera, sketchbook, or music app' },
+					{ key: 'B', text: 'First-aid kit or notebook for advice' },
+					{ key: 'C', text: 'Microscope, computer, or calculator' },
+					{ key: 'D', text: 'Planner, microphone, or laptop' },
+					{ key: 'E', text: 'Hammer, sports gear, or map' }
+				]
+			},
+			{
+				prompt: 'What would make a job exciting for you?',
+				answers: [
+					{ key: 'A', text: 'Getting to be creative every day' },
+					{ key: 'B', text: 'Making people’s lives better' },
+					{ key: 'C', text: 'Solving big questions or problems' },
+					{ key: 'D', text: 'Being in charge of something important' },
+					{ key: 'E', text: 'Doing something different and active' }
+				]
+			},
+			{
+				prompt: 'What bothers you most?',
+				answers: [
+					{ key: 'A', text: 'Being told there’s only one “right” way to do things' },
+					{ key: 'B', text: 'People being treated unfairly' },
+					{ key: 'C', text: 'Not understanding how something works' },
+					{ key: 'D', text: 'Chaos with no plan' },
+					{ key: 'E', text: 'Sitting still for too long' }
+				]
+			},
+			{
+				prompt: 'Choose a dream workplace:',
+				answers: [
+					{ key: 'A', text: 'A studio, stage, game company, or design room' },
+					{ key: 'B', text: 'A hospital, school, animal shelter, or community center' },
+					{ key: 'C', text: 'A lab, tech office, library, or space center' },
+					{ key: 'D', text: 'An office, business, courtroom, or leadership meeting' },
+					{ key: 'E', text: 'Outdoors, a workshop, sports field, or travel job' }
+				]
+			}
+		],
+		results: {
+			A: {
+				title: 'Creative Career',
+				emoji: '🎨',
+				blurb:
+					'You might enjoy careers like artist, writer, musician, actor, filmmaker, animator, game designer, fashion designer, or content creator. You have imagination and original ideas, and you’d probably like a job where you can express yourself and make things.'
+			},
+			B: {
+				title: 'Helping Career',
+				emoji: '🤝',
+				blurb:
+					'You might enjoy careers like teacher, doctor, nurse, therapist, veterinarian, social worker, coach, or counselor. You care about people and want to make a difference, and you’d probably do well where kindness and listening matter.'
+			},
+			C: {
+				title: 'Science or Tech Career',
+				emoji: '🔬',
+				blurb:
+					'You might enjoy careers like scientist, engineer, coder, inventor, doctor, researcher, astronaut, or data analyst. You’re curious and like figuring things out, so you’d probably enjoy a career where you solve problems and learn new things.'
+			},
+			D: {
+				title: 'Leadership or Business Career',
+				emoji: '📈',
+				blurb:
+					'You might enjoy careers like entrepreneur, lawyer, manager, politician, business owner, marketer, or project leader. You’re organized, confident, and good at planning — you might like leading teams, making decisions, or building something big.'
+			},
+			E: {
+				title: 'Active or Hands-On Career',
+				emoji: '🛠️',
+				blurb:
+					'You might enjoy careers like athlete, firefighter, police officer, builder, mechanic, chef, pilot, park ranger, or travel guide. You like movement, action, and real-world challenges, and may prefer a job where every day feels different.'
+			}
+		},
+		ties: {
+			AB: {
+				title: 'Creative + Helping',
+				emoji: '📕',
+				blurb: 'Children’s book author, art therapist, teacher, or performer.'
+			},
+			AC: {
+				title: 'Creative + Tech',
+				emoji: '🕹️',
+				blurb: 'Game designer, inventor, architect, or animator.'
+			},
+			AD: {
+				title: 'Creative + Business',
+				emoji: '🎬',
+				blurb: 'Creative director, entrepreneur, filmmaker, or fashion brand owner.'
+			},
+			AE: {
+				title: 'Creative + Active',
+				emoji: '📷',
+				blurb: 'Photographer, chef, stunt performer, or travel creator.'
+			},
+			BC: {
+				title: 'Helping + Science',
+				emoji: '🩺',
+				blurb: 'Doctor, veterinarian, psychologist, or environmental scientist.'
+			},
+			BD: {
+				title: 'Helping + Business',
+				emoji: '🏫',
+				blurb: 'Principal, lawyer, nonprofit leader, or community organizer.'
+			},
+			BE: {
+				title: 'Helping + Active',
+				emoji: '🚒',
+				blurb: 'Coach, firefighter, nurse, or animal rescue worker.'
+			},
+			CD: {
+				title: 'Science + Business',
+				emoji: '💻',
+				blurb: 'Engineer, tech founder, scientist, or financial analyst.'
+			},
+			CE: {
+				title: 'Science + Active',
+				emoji: '✈️',
+				blurb: 'Pilot, forensic scientist, robotics engineer, or wildlife biologist.'
+			},
+			DE: {
+				title: 'Business + Active',
+				emoji: '🏟️',
+				blurb: 'Business owner, event planner, military leader, or sports manager.'
+			}
+		}
+	},
+	{
+		id: 'dreamhouse',
+		name: 'What Would Your Dream House Be?',
+		emoji: '🏡',
+		tagline: 'Open the door to the home that fits you.',
+		accent: '#5BA0D6',
+		questions: [
+			{
+				prompt: 'Your perfect weekend would be:',
+				answers: [
+					{ key: 'A', text: 'Swimming, relaxing in the sun, or going somewhere beautiful' },
+					{ key: 'B', text: 'Playing games, watching movies, or hanging out with friends' },
+					{ key: 'C', text: 'Reading, drawing, baking, or doing something cozy' },
+					{ key: 'D', text: 'Exploring nature or going on an adventure' },
+					{ key: 'E', text: 'Creating, decorating, or building something cool' }
+				]
+			},
+			{
+				prompt: 'Your friends would describe you as:',
+				answers: [
+					{ key: 'A', text: 'Chill and fun' },
+					{ key: 'B', text: 'Social and energetic' },
+					{ key: 'C', text: 'Calm and comforting' },
+					{ key: 'D', text: 'Adventurous and outdoorsy' },
+					{ key: 'E', text: 'Creative and unique' }
+				]
+			},
+			{
+				prompt: 'Pick a view from your window:',
+				answers: [
+					{ key: 'A', text: 'Ocean waves' },
+					{ key: 'B', text: 'A city skyline' },
+					{ key: 'C', text: 'A quiet garden' },
+					{ key: 'D', text: 'Mountains or forest' },
+					{ key: 'E', text: 'A colorful neighborhood or cool courtyard' }
+				]
+			},
+			{
+				prompt: 'Your dream room would have:',
+				answers: [
+					{ key: 'A', text: 'Big windows and beachy colors' },
+					{ key: 'B', text: 'A game room, movie room, or hangout space' },
+					{ key: 'C', text: 'Soft blankets, bookshelves, and warm lights' },
+					{ key: 'D', text: 'Camping gear, sports stuff, or outdoor equipment' },
+					{ key: 'E', text: 'Art supplies, music gear, or a secret creative space' }
+				]
+			},
+			{
+				prompt: 'What matters most in a home?',
+				answers: [
+					{ key: 'A', text: 'Relaxing and feeling like you’re on vacation' },
+					{ key: 'B', text: 'Having space for people and fun' },
+					{ key: 'C', text: 'Feeling safe, cozy, and peaceful' },
+					{ key: 'D', text: 'Being close to nature' },
+					{ key: 'E', text: 'Showing your personality' }
+				]
+			},
+			{
+				prompt: 'Choose a home feature:',
+				answers: [
+					{ key: 'A', text: 'Pool or balcony' },
+					{ key: 'B', text: 'Huge living room' },
+					{ key: 'C', text: 'Fireplace or reading nook' },
+					{ key: 'D', text: 'Treehouse, garden, or hiking trail nearby' },
+					{ key: 'E', text: 'Secret room, art studio, or rooftop space' }
+				]
+			},
+			{
+				prompt: 'If you hosted friends, you would:',
+				answers: [
+					{ key: 'A', text: 'Have a pool party or beach day' },
+					{ key: 'B', text: 'Throw a game/movie night' },
+					{ key: 'C', text: 'Make snacks and have a cozy hangout' },
+					{ key: 'D', text: 'Go outside for an adventure' },
+					{ key: 'E', text: 'Plan a themed party or creative activity' }
+				]
+			},
+			{
+				prompt: 'Pick a color palette:',
+				answers: [
+					{ key: 'A', text: 'Blue, white, and sandy beige' },
+					{ key: 'B', text: 'Bright colors and bold lights' },
+					{ key: 'C', text: 'Cream, brown, and soft gold' },
+					{ key: 'D', text: 'Green, gray, and wood tones' },
+					{ key: 'E', text: 'Purple, teal, black, or rainbow colors' }
+				]
+			}
+		],
+		results: {
+			A: {
+				title: 'Beach House',
+				emoji: '🌊',
+				blurb:
+					'Your dream house would be bright, sunny, and relaxing. You’d love big windows, ocean views, and a peaceful vacation feeling. Your home would be the perfect place to chill and recharge.'
+			},
+			B: {
+				title: 'Modern City House',
+				emoji: '🏙️',
+				blurb:
+					'Your dream house would be stylish, exciting, and full of fun spaces. You’d probably want a game room, movie area, cool lights, and plenty of room for friends. Your home would feel energetic and social.'
+			},
+			C: {
+				title: 'Cozy Cottage',
+				emoji: '🕯️',
+				blurb:
+					'Your dream house would be warm, peaceful, and comforting. Think blankets, books, candles, a fireplace, and a kitchen that smells like cookies. Your home would feel safe and relaxing.'
+			},
+			D: {
+				title: 'Forest Cabin',
+				emoji: '🌲',
+				blurb:
+					'Your dream house would be surrounded by nature. You’d love trees, trails, animals, fresh air, and maybe a treehouse or garden. Your home would be adventurous but still peaceful.'
+			},
+			E: {
+				title: 'Creative Dream House',
+				emoji: '🎨',
+				blurb:
+					'Your dream house would be unique and full of personality. It might have secret rooms, colorful walls, a studio, a music space, or weird furniture that somehow looks awesome. Your home would be totally yours.'
+			}
+		},
+		ties: {
+			AB: {
+				title: 'Luxury Penthouse with a pool',
+				emoji: '🏊',
+				blurb: 'Social, stylish, and relaxing.'
+			},
+			AC: { title: 'Seaside Cottage', emoji: '🐚', blurb: 'Calm, cozy, and beachy.' },
+			AD: { title: 'Lake House', emoji: '🛶', blurb: 'Peaceful, outdoorsy, and fun.' },
+			AE: { title: 'Colorful Beach Villa', emoji: '🌴', blurb: 'Creative, sunny, and unique.' },
+			BC: { title: 'Big Family House', emoji: '🏠', blurb: 'Fun, cozy, and welcoming.' },
+			BD: { title: 'Mountain Lodge', emoji: '🏔️', blurb: 'Social, adventurous, and warm.' },
+			BE: { title: 'Futuristic Smart House', emoji: '🤖', blurb: 'Bold, fun, and creative.' },
+			CD: { title: 'Woodland Cottage', emoji: '🍄', blurb: 'Peaceful, cozy, and nature-loving.' },
+			CE: { title: 'Storybook House', emoji: '📖', blurb: 'Cozy, magical, and artistic.' },
+			DE: {
+				title: 'Eco Treehouse',
+				emoji: '🌳',
+				blurb: 'Adventurous, creative, and close to nature.'
+			}
+		}
+	},
+	{
+		id: 'plant',
+		name: 'What Plant Are You?',
+		emoji: '🌿',
+		tagline: 'Take root and discover your green personality.',
+		accent: '#6FA85A',
+		questions: [
+			{
+				prompt: 'Your friends would describe you as:',
+				answers: [
+					{ key: 'A', text: 'Bright and cheerful' },
+					{ key: 'B', text: 'Calm and peaceful' },
+					{ key: 'C', text: 'Strong and independent' },
+					{ key: 'D', text: 'Creative and different' },
+					{ key: 'E', text: 'Caring and dependable' }
+				]
+			},
+			{
+				prompt: 'Your perfect afternoon would be:',
+				answers: [
+					{ key: 'A', text: 'Spending time outside or laughing with friends' },
+					{ key: 'B', text: 'Reading, relaxing, or listening to music' },
+					{ key: 'C', text: 'Working on a goal or doing your own thing' },
+					{ key: 'D', text: 'Making art, decorating, or trying a new idea' },
+					{ key: 'E', text: 'Helping someone or spending time with family/friends' }
+				]
+			},
+			{
+				prompt: 'In a group, you usually:',
+				answers: [
+					{ key: 'A', text: 'Bring positive energy' },
+					{ key: 'B', text: 'Keep things calm' },
+					{ key: 'C', text: 'Stay focused and handle problems' },
+					{ key: 'D', text: 'Add unique ideas' },
+					{ key: 'E', text: 'Make sure everyone feels included' }
+				]
+			},
+			{
+				prompt: 'Pick a place to grow:',
+				answers: [
+					{ key: 'A', text: 'A sunny field' },
+					{ key: 'B', text: 'A quiet pond' },
+					{ key: 'C', text: 'A dry desert' },
+					{ key: 'D', text: 'A colorful garden' },
+					{ key: 'E', text: 'A cozy backyard' }
+				]
+			},
+			{
+				prompt: 'If something goes wrong, you:',
+				answers: [
+					{ key: 'A', text: 'Try to stay positive' },
+					{ key: 'B', text: 'Take a deep breath and stay calm' },
+					{ key: 'C', text: 'Push through and don’t give up' },
+					{ key: 'D', text: 'Think of a creative solution' },
+					{ key: 'E', text: 'Check on everyone and help fix it' }
+				]
+			},
+			{
+				prompt: 'Choose a color:',
+				answers: [
+					{ key: 'A', text: 'Yellow' },
+					{ key: 'B', text: 'Blue or white' },
+					{ key: 'C', text: 'Green' },
+					{ key: 'D', text: 'Purple or rainbow' },
+					{ key: 'E', text: 'Pink or red' }
+				]
+			},
+			{
+				prompt: 'What annoys you most?',
+				answers: [
+					{ key: 'A', text: 'Negative energy' },
+					{ key: 'B', text: 'Loud chaos' },
+					{ key: 'C', text: 'People giving up too fast' },
+					{ key: 'D', text: 'Being forced to be boring' },
+					{ key: 'E', text: 'People being unkind' }
+				]
+			},
+			{
+				prompt: 'Your biggest strength is:',
+				answers: [
+					{ key: 'A', text: 'Positivity' },
+					{ key: 'B', text: 'Peacefulness' },
+					{ key: 'C', text: 'Resilience' },
+					{ key: 'D', text: 'Imagination' },
+					{ key: 'E', text: 'Loyalty' }
+				]
+			}
+		],
+		results: {
+			A: {
+				title: 'Sunflower',
+				emoji: '🌻',
+				blurb:
+					'You’re bright, cheerful, and full of positive energy. You can make people smile and bring warmth into a room. People probably enjoy your happy, sunny vibe.'
+			},
+			B: {
+				title: 'Water Lily',
+				emoji: '🪷',
+				blurb:
+					'You’re calm, peaceful, and thoughtful. You don’t need to be loud to be noticed. You have a gentle energy that helps people feel relaxed.'
+			},
+			C: {
+				title: 'Cactus',
+				emoji: '🌵',
+				blurb:
+					'You’re strong, independent, and resilient. You can handle tough situations and keep going. You may like your space, but you’re still awesome to be around.'
+			},
+			D: {
+				title: 'Orchid',
+				emoji: '🌺',
+				blurb:
+					'You’re creative, unique, and interesting. You have your own style and ideas, and you probably don’t like being forced to fit in.'
+			},
+			E: {
+				title: 'Rose',
+				emoji: '🌹',
+				blurb:
+					'You’re caring, loyal, and dependable. You protect the people you care about and bring beauty and kindness into your friendships.'
+			}
+		},
+		ties: {
+			AB: { title: 'Daisy', emoji: '🌼', blurb: 'Cheerful, gentle, and sweet.' },
+			AC: { title: 'Aloe Vera', emoji: '🪴', blurb: 'Positive, strong, and helpful.' },
+			AD: { title: 'Hibiscus', emoji: '🌺', blurb: 'Bright, creative, and bold.' },
+			AE: { title: 'Tulip', emoji: '🌷', blurb: 'Cheerful, loyal, and kind.' },
+			BC: { title: 'Bonsai Tree', emoji: '🎍', blurb: 'Calm, strong, and patient.' },
+			BD: { title: 'Lavender', emoji: '💜', blurb: 'Peaceful, creative, and soothing.' },
+			BE: { title: 'Cherry Blossom', emoji: '🌸', blurb: 'Gentle, caring, and beautiful.' },
+			CD: { title: 'Venus Flytrap', emoji: '🪤', blurb: 'Independent, unique, and surprising.' },
+			CE: { title: 'Ivy', emoji: '🌿', blurb: 'Loyal, strong, and dependable.' },
+			DE: { title: 'Poppy', emoji: '🌺', blurb: 'Creative, caring, and memorable.' }
+		}
+	},
+	{
+		id: 'color',
+		name: 'What Color Are You?',
+		emoji: '🎨',
+		tagline: 'Eight questions to reveal your true shade.',
+		accent: '#E0567A',
+		questions: [
+			{
+				prompt: 'Your friends would describe you as:',
+				answers: [
+					{ key: 'A', text: 'Energetic and bold' },
+					{ key: 'B', text: 'Calm and trustworthy' },
+					{ key: 'C', text: 'Kind and cheerful' },
+					{ key: 'D', text: 'Creative and mysterious' },
+					{ key: 'E', text: 'Peaceful and balanced' }
+				]
+			},
+			{
+				prompt: 'Your perfect day would be:',
+				answers: [
+					{ key: 'A', text: 'Doing something exciting or competitive' },
+					{ key: 'B', text: 'Relaxing, reading, or having a deep conversation' },
+					{ key: 'C', text: 'Laughing with friends or helping someone' },
+					{ key: 'D', text: 'Making art, music, videos, stories, or trying something unusual' },
+					{ key: 'E', text: 'Spending time in nature or somewhere quiet' }
+				]
+			},
+			{
+				prompt: 'In a group, you usually:',
+				answers: [
+					{ key: 'A', text: 'Bring the energy' },
+					{ key: 'B', text: 'Stay calm and think things through' },
+					{ key: 'C', text: 'Make people feel included' },
+					{ key: 'D', text: 'Come up with original ideas' },
+					{ key: 'E', text: 'Keep things peaceful and fair' }
+				]
+			},
+			{
+				prompt: 'Pick a place:',
+				answers: [
+					{ key: 'A', text: 'A stadium, concert, or amusement park' },
+					{ key: 'B', text: 'The ocean, a library, or a quiet room' },
+					{ key: 'C', text: 'A sunny park or cozy kitchen' },
+					{ key: 'D', text: 'An art studio, theater, or hidden room' },
+					{ key: 'E', text: 'A forest, garden, or mountain trail' }
+				]
+			},
+			{
+				prompt: 'If something goes wrong, you:',
+				answers: [
+					{ key: 'A', text: 'Take action fast' },
+					{ key: 'B', text: 'Stay calm and make a smart plan' },
+					{ key: 'C', text: 'Check how everyone is feeling' },
+					{ key: 'D', text: 'Think of a creative solution' },
+					{ key: 'E', text: 'Try to keep the peace and fix things gently' }
+				]
+			},
+			{
+				prompt: 'Choose a word:',
+				answers: [
+					{ key: 'A', text: 'Power' },
+					{ key: 'B', text: 'Trust' },
+					{ key: 'C', text: 'Joy' },
+					{ key: 'D', text: 'Imagination' },
+					{ key: 'E', text: 'Balance' }
+				]
+			},
+			{
+				prompt: 'What annoys you most?',
+				answers: [
+					{ key: 'A', text: 'Being told you can’t do something' },
+					{ key: 'B', text: 'People being dishonest' },
+					{ key: 'C', text: 'Negativity' },
+					{ key: 'D', text: 'Boring routines' },
+					{ key: 'E', text: 'Unfairness or drama' }
+				]
+			},
+			{
+				prompt: 'Your biggest strength is:',
+				answers: [
+					{ key: 'A', text: 'Confidence' },
+					{ key: 'B', text: 'Loyalty' },
+					{ key: 'C', text: 'Positivity' },
+					{ key: 'D', text: 'Creativity' },
+					{ key: 'E', text: 'Patience' }
+				]
+			}
+		],
+		results: {
+			A: {
+				title: 'Red',
+				emoji: '❤️',
+				blurb:
+					'You’re bold, energetic, and passionate. You like action and don’t back down easily. People may see you as confident, exciting, and brave.'
+			},
+			B: {
+				title: 'Blue',
+				emoji: '💙',
+				blurb:
+					'You’re calm, thoughtful, and trustworthy. People can rely on you because you’re steady and honest. You probably think before you act.'
+			},
+			C: {
+				title: 'Yellow',
+				emoji: '💛',
+				blurb:
+					'You’re cheerful, friendly, and positive. You bring light into people’s lives and know how to make things feel more fun and hopeful.'
+			},
+			D: {
+				title: 'Purple',
+				emoji: '💜',
+				blurb:
+					'You’re creative, imaginative, and unique. You have your own style and may enjoy art, music, stories, or mysterious things. You think differently in a cool way.'
+			},
+			E: {
+				title: 'Green',
+				emoji: '💚',
+				blurb:
+					'You’re peaceful, balanced, and caring. You like harmony and fairness, and you may feel connected to nature or calm spaces.'
+			}
+		},
+		ties: {
+			AB: { title: 'Navy', emoji: '🔵', blurb: 'Strong, focused, and trustworthy.' },
+			AC: { title: 'Orange', emoji: '🧡', blurb: 'Energetic, cheerful, and bold.' },
+			AD: { title: 'Magenta', emoji: '💗', blurb: 'Dramatic, creative, and confident.' },
+			AE: { title: 'Maroon', emoji: '🟤', blurb: 'Powerful, grounded, and steady.' },
+			BC: { title: 'Sky Blue', emoji: '🩵', blurb: 'Calm, friendly, and bright.' },
+			BD: { title: 'Indigo', emoji: '🔷', blurb: 'Thoughtful, creative, and deep.' },
+			BE: { title: 'Teal', emoji: '🩵', blurb: 'Peaceful, smart, and balanced.' },
+			CD: { title: 'Pink', emoji: '💖', blurb: 'Joyful, creative, and sweet.' },
+			CE: { title: 'Lime', emoji: '💚', blurb: 'Bright, kind, and fresh.' },
+			DE: { title: 'Sage', emoji: '🌿', blurb: 'Creative, calm, and thoughtful.' }
+		}
+	},
+	{
+		id: 'bird',
+		name: 'What Bird Are You?',
+		emoji: '🐦',
+		tagline: 'Spread your wings and find your flock.',
+		accent: '#4DA8B0',
+		questions: [
+			{
+				prompt: 'Your friends would describe you as:',
+				answers: [
+					{ key: 'A', text: 'Brave and focused' },
+					{ key: 'B', text: 'Colorful and social' },
+					{ key: 'C', text: 'Wise and observant' },
+					{ key: 'D', text: 'Peaceful and kind' },
+					{ key: 'E', text: 'Energetic and playful' }
+				]
+			},
+			{
+				prompt: 'Your perfect day would be:',
+				answers: [
+					{ key: 'A', text: 'Working toward a goal or going on an adventure' },
+					{ key: 'B', text: 'Hanging out with friends and doing something fun' },
+					{ key: 'C', text: 'Reading, thinking, or solving a mystery' },
+					{ key: 'D', text: 'Relaxing somewhere calm and beautiful' },
+					{ key: 'E', text: 'Running around, playing games, or trying random activities' }
+				]
+			},
+			{
+				prompt: 'In a group, you usually:',
+				answers: [
+					{ key: 'A', text: 'Take charge when needed' },
+					{ key: 'B', text: 'Talk, laugh, and connect with people' },
+					{ key: 'C', text: 'Notice details and think things through' },
+					{ key: 'D', text: 'Keep things calm and fair' },
+					{ key: 'E', text: 'Bring energy and silliness' }
+				]
+			},
+			{
+				prompt: 'Pick a place to fly:',
+				answers: [
+					{ key: 'A', text: 'Over mountains' },
+					{ key: 'B', text: 'Through a colorful rainforest' },
+					{ key: 'C', text: 'Under the moon at night' },
+					{ key: 'D', text: 'Across a peaceful lake' },
+					{ key: 'E', text: 'Around a sunny backyard or park' }
+				]
+			},
+			{
+				prompt: 'If something goes wrong, you:',
+				answers: [
+					{ key: 'A', text: 'Stay focused and handle it' },
+					{ key: 'B', text: 'Ask friends for support or talk it out' },
+					{ key: 'C', text: 'Think quietly until you understand it' },
+					{ key: 'D', text: 'Try to calm everyone down' },
+					{ key: 'E', text: 'Distract people with humor, then help fix it' }
+				]
+			},
+			{
+				prompt: 'Choose a color:',
+				answers: [
+					{ key: 'A', text: 'Brown or gold' },
+					{ key: 'B', text: 'Rainbow or bright colors' },
+					{ key: 'C', text: 'Dark blue or silver' },
+					{ key: 'D', text: 'White or soft gray' },
+					{ key: 'E', text: 'Yellow or green' }
+				]
+			},
+			{
+				prompt: 'What annoys you most?',
+				answers: [
+					{ key: 'A', text: 'Giving up too easily' },
+					{ key: 'B', text: 'Being ignored' },
+					{ key: 'C', text: 'People not paying attention' },
+					{ key: 'D', text: 'Fighting or unfairness' },
+					{ key: 'E', text: 'Being bored' }
+				]
+			},
+			{
+				prompt: 'Your biggest strength is:',
+				answers: [
+					{ key: 'A', text: 'Determination' },
+					{ key: 'B', text: 'Friendliness' },
+					{ key: 'C', text: 'Wisdom' },
+					{ key: 'D', text: 'Peacefulness' },
+					{ key: 'E', text: 'Energy' }
+				]
+			}
+		],
+		results: {
+			A: {
+				title: 'Eagle',
+				emoji: '🦅',
+				blurb:
+					'You’re brave, focused, and determined. You like goals, challenges, and feeling independent. People may see you as strong and confident.'
+			},
+			B: {
+				title: 'Parrot',
+				emoji: '🦜',
+				blurb:
+					'You’re colorful, social, and expressive. You bring fun energy to people around you and probably enjoy talking, laughing, or sharing ideas.'
+			},
+			C: {
+				title: 'Owl',
+				emoji: '🦉',
+				blurb:
+					'You’re wise, observant, and thoughtful. You notice details and may enjoy mysteries, facts, books, or figuring things out.'
+			},
+			D: {
+				title: 'Dove',
+				emoji: '🕊️',
+				blurb:
+					'You’re peaceful, kind, and calming. You care about fairness and want people to get along. Your gentle energy can make others feel safe.'
+			},
+			E: {
+				title: 'Hummingbird',
+				emoji: '🌺',
+				blurb:
+					'You’re energetic, playful, and curious. You move quickly between ideas and activities, and you bring bright, lively energy wherever you go.'
+			}
+		},
+		ties: {
+			AB: { title: 'Hawk', emoji: '🦅', blurb: 'Bold, sharp, and expressive.' },
+			AC: { title: 'Raven', emoji: '🐦‍⬛', blurb: 'Focused, clever, and mysterious.' },
+			AD: { title: 'Swan', emoji: '🦢', blurb: 'Graceful, strong, and peaceful.' },
+			AE: { title: 'Falcon', emoji: '🦅', blurb: 'Fast, brave, and energetic.' },
+			BC: { title: 'Cockatoo', emoji: '🦜', blurb: 'Social, clever, and funny.' },
+			BD: { title: 'Lovebird', emoji: '🐦', blurb: 'Friendly, sweet, and peaceful.' },
+			BE: { title: 'Toucan', emoji: '🦜', blurb: 'Colorful, playful, and fun.' },
+			CD: { title: 'Crane', emoji: '🦩', blurb: 'Thoughtful, calm, and graceful.' },
+			CE: { title: 'Woodpecker', emoji: '🪶', blurb: 'Curious, focused, and energetic.' },
+			DE: { title: 'Robin', emoji: '🐦', blurb: 'Cheerful, kind, and lively.' }
+		}
+	},
+	{
+		id: 'maincharacter',
+		name: 'What Kind of Main Character Are You?',
+		emoji: '✨',
+		tagline: 'If your life were a story, who would you be?',
+		accent: '#B05BE6',
+		questions: [
+			{
+				prompt: 'Your friends would describe you as:',
+				answers: [
+					{ key: 'A', text: 'Brave and bold' },
+					{ key: 'B', text: 'Funny and chaotic' },
+					{ key: 'C', text: 'Smart and curious' },
+					{ key: 'D', text: 'Kind and loyal' },
+					{ key: 'E', text: 'Creative and mysterious' }
+				]
+			},
+			{
+				prompt: 'If your life became a movie, the opening scene would be:',
+				answers: [
+					{ key: 'A', text: 'You getting ready for a big challenge' },
+					{ key: 'B', text: 'You accidentally causing a hilarious problem' },
+					{ key: 'C', text: 'You discovering a strange clue' },
+					{ key: 'D', text: 'You helping a friend who needs you' },
+					{ key: 'E', text: 'You finding a secret door, map, or message' }
+				]
+			},
+			{
+				prompt: 'In a group project, you are usually:',
+				answers: [
+					{ key: 'A', text: 'The leader' },
+					{ key: 'B', text: 'The comedian' },
+					{ key: 'C', text: 'The problem-solver' },
+					{ key: 'D', text: 'The supporter' },
+					{ key: 'E', text: 'The idea person' }
+				]
+			},
+			{
+				prompt: 'Pick a sidekick:',
+				answers: [
+					{ key: 'A', text: 'A brave wolf' },
+					{ key: 'B', text: 'A talking raccoon' },
+					{ key: 'C', text: 'A robot assistant' },
+					{ key: 'D', text: 'A loyal golden retriever' },
+					{ key: 'E', text: 'A magical black cat' }
+				]
+			},
+			{
+				prompt: 'If you found a mysterious glowing object, you would:',
+				answers: [
+					{ key: 'A', text: 'Pick it up and see what happens' },
+					{ key: 'B', text: 'Make a joke, then poke it with a stick' },
+					{ key: 'C', text: 'Study it carefully' },
+					{ key: 'D', text: 'Ask if it could be dangerous for anyone nearby' },
+					{ key: 'E', text: 'Feel like it was meant for you' }
+				]
+			},
+			{
+				prompt: 'Your biggest strength is:',
+				answers: [
+					{ key: 'A', text: 'Courage' },
+					{ key: 'B', text: 'Humor' },
+					{ key: 'C', text: 'Intelligence' },
+					{ key: 'D', text: 'Kindness' },
+					{ key: 'E', text: 'Imagination' }
+				]
+			},
+			{
+				prompt: 'Choose a setting:',
+				answers: [
+					{ key: 'A', text: 'A battlefield, arena, or mountain' },
+					{ key: 'B', text: 'A school where everything keeps going wrong' },
+					{ key: 'C', text: 'A lab, library, or detective office' },
+					{ key: 'D', text: 'A cozy town full of friends and family' },
+					{ key: 'E', text: 'An enchanted forest or hidden magical city' }
+				]
+			},
+			{
+				prompt: 'What annoys you most?',
+				answers: [
+					{ key: 'A', text: 'People giving up too fast' },
+					{ key: 'B', text: 'Boring situations' },
+					{ key: 'C', text: 'Not knowing the answer' },
+					{ key: 'D', text: 'People being mean or unfair' },
+					{ key: 'E', text: 'Being forced to act normal' }
+				]
+			}
+		],
+		results: {
+			A: {
+				title: 'The Hero Main Character',
+				emoji: '🗡️',
+				blurb:
+					'You’re brave, determined, and ready to face challenges. You’re the type of main character who protects others and doesn’t quit easily.'
+			},
+			B: {
+				title: 'The Comedy Main Character',
+				emoji: '😂',
+				blurb:
+					'You’re funny, playful, and full of personality. Even when things go wrong, you can make the story entertaining.'
+			},
+			C: {
+				title: 'The Mystery Main Character',
+				emoji: '🔎',
+				blurb:
+					'You’re curious, clever, and observant. You notice details other people miss and would probably solve the case before everyone else.'
+			},
+			D: {
+				title: 'The Heart-of-the-Story Main Character',
+				emoji: '💛',
+				blurb:
+					'You’re loyal, caring, and trustworthy. You’re the character people root for because you care about doing the right thing.'
+			},
+			E: {
+				title: 'The Magical Main Character',
+				emoji: '🌙',
+				blurb:
+					'You’re creative, unique, and imaginative. Your story would be full of secrets, magic, and big “chosen one” energy.'
+			}
+		},
+		ties: {
+			AB: { title: 'Action Comedy Star', emoji: '💥', blurb: 'Brave, funny, and chaotic.' },
+			AC: { title: 'Spy Hero', emoji: '🕵️', blurb: 'Bold, smart, and focused.' },
+			AD: { title: 'Noble Protector', emoji: '🛡️', blurb: 'Brave, loyal, and kind.' },
+			AE: { title: 'Chosen One', emoji: '⚡', blurb: 'Powerful, creative, and adventurous.' },
+			BC: { title: 'Funny Detective', emoji: '🔍', blurb: 'Clever, silly, and unpredictable.' },
+			BD: { title: 'Best Friend Main Character', emoji: '🤝', blurb: 'Sweet, funny, and lovable.' },
+			BE: { title: 'Magical Trickster', emoji: '🎩', blurb: 'Creative, funny, and mysterious.' },
+			CD: {
+				title: 'Thoughtful Problem-Solver',
+				emoji: '🧩',
+				blurb: 'Smart, kind, and dependable.'
+			},
+			CE: { title: 'Secret Genius', emoji: '🧠', blurb: 'Mysterious, imaginative, and clever.' },
+			DE: { title: 'Gentle Dreamer', emoji: '🌸', blurb: 'Caring, creative, and magical.' }
 		}
 	}
 ];

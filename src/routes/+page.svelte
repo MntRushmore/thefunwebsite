@@ -61,7 +61,7 @@
 		<div class="logo-stage">
 			<img src="logo.png" class="room-bg" alt="The Fun Website" />
 
-			<a href="/game" class="badge badge-games" aria-label="Games">
+			<a href="/games" class="badge badge-games" aria-label="Games">
 				<img src="landing/makegames.png" alt="Games" />
 			</a>
 			<a href="/puzzle" class="badge badge-puzzles" aria-label="Puzzles">
