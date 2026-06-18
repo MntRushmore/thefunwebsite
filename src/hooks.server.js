@@ -17,6 +17,7 @@ export async function handle({ event, resolve }) {
 		"connect-src 'self'",
 		"media-src 'self' data:",
 		"object-src 'none'",
+		"frame-src 'self' https://everettmartin.github.io",
 		"base-uri 'self'",
 		"form-action 'self'",
 		"frame-ancestors 'self'"
