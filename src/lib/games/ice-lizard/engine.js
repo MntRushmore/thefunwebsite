@@ -867,184 +867,324 @@ class Player {
 		}
 	}
 
-	draw(ctx, cameraX, cameraY) {
+	draw(ctx, cameraX, cameraY, time = 0) {
 		if (this.invuln > 0 && this.invuln % 8 < 4) return;
 
 		const sx = this.rect.x - cameraX;
 		const sy = this.rect.y - cameraY;
 		const d = this.facing;
+		const t = time || Date.now() / 1000;
 
-		const dark = '#124660';
-		const mid = '#2d91b9';
-		const light = '#69d7f0';
-		const belly = '#aaebf5';
-		const scaleDark = '#0c3750';
-		const scaleLight = '#91ebfa';
-		const claw = '#ebf5eb';
-		const eye = '#e6d246';
-		const pupil = '#051414';
+		// Color palette - rich ice blues
+		const darkBlue = '#0a3d5c';
+		const midBlue = '#1a7a9e';
+		const lightBlue = '#4dc4e8';
+		const paleBlue = '#a8e4f5';
+		const white = '#e8faff';
+		const bellyColor = '#c5eef8';
+		const eyeGold = '#f0d848';
+		const eyeRim = '#8b6914';
 
 		let bodyH, bodyW, bodyY, headY, tailY;
 		if (this.ducking) {
-			bodyH = 22; bodyW = 47; bodyY = sy + 8; headY = sy + 8; tailY = sy + 22;
+			bodyH = 24; bodyW = 50; bodyY = sy + 6; headY = sy + 4; tailY = sy + 20;
 		} else {
-			bodyH = 27; bodyW = 42; bodyY = sy + 17; headY = sy + 13; tailY = sy + 34;
+			bodyH = 30; bodyW = 44; bodyY = sy + 14; headY = sy + 8; tailY = sy + 32;
 		}
 
-		// Shadow
-		ctx.fillStyle = 'rgba(0,0,0,0.3)';
+		const bodyCenterX = sx + 15;
+		const bodyCenterY = bodyY + bodyH / 2;
+
+		// Animated tail wave
+		const tailWave = Math.sin(t * 4) * 6;
+		const tailWave2 = Math.sin(t * 3.5 + 1) * 4;
+
+		// Shadow with gradient
+		const shadowGrad = ctx.createRadialGradient(bodyCenterX, sy + this.rect.height, 0, bodyCenterX, sy + this.rect.height, 40);
+		shadowGrad.addColorStop(0, 'rgba(0,20,40,0.4)');
+		shadowGrad.addColorStop(1, 'rgba(0,20,40,0)');
+		ctx.fillStyle = shadowGrad;
 		ctx.beginPath();
-		ctx.ellipse(sx + 18, sy + this.rect.height - 2, 35, 6, 0, 0, Math.PI * 2);
+		ctx.ellipse(bodyCenterX, sy + this.rect.height, 40, 8, 0, 0, Math.PI * 2);
 		ctx.fill();
 
-		// Tail
-		const tailBase = [sx + 13 - d * 5, tailY];
-		const tailMid = [sx + 4 - d * 32, tailY + 4];
-		const tailTip = [sx - d * 65, tailY + 11];
+		// === TAIL ===
+		const tailBase = [bodyCenterX - d * 10, tailY];
+		const tailMid = [bodyCenterX - d * 38 + tailWave * d * 0.3, tailY + 2 + tailWave2];
+		const tailEnd = [bodyCenterX - d * 70 + tailWave * d, tailY - 2 + tailWave];
 
-		ctx.strokeStyle = scaleDark;
-		ctx.lineWidth = 13;
+		// Tail gradient
+		ctx.lineCap = 'round';
+		ctx.strokeStyle = darkBlue;
+		ctx.lineWidth = 14;
 		ctx.beginPath();
 		ctx.moveTo(tailBase[0], tailBase[1]);
-		ctx.lineTo(tailMid[0], tailMid[1]);
+		ctx.quadraticCurveTo(tailMid[0], tailMid[1], tailEnd[0], tailEnd[1]);
 		ctx.stroke();
 
-		ctx.strokeStyle = dark;
-		ctx.lineWidth = 8;
+		ctx.strokeStyle = midBlue;
+		ctx.lineWidth = 10;
 		ctx.beginPath();
-		ctx.moveTo(tailMid[0], tailMid[1]);
-		ctx.lineTo(tailTip[0], tailTip[1]);
+		ctx.moveTo(tailBase[0], tailBase[1]);
+		ctx.quadraticCurveTo(tailMid[0], tailMid[1], tailEnd[0], tailEnd[1]);
 		ctx.stroke();
 
-		ctx.fillStyle = mid;
+		// Tail highlight
+		ctx.strokeStyle = lightBlue;
+		ctx.lineWidth = 4;
 		ctx.beginPath();
-		ctx.arc(tailTip[0], tailTip[1], 4, 0, Math.PI * 2);
+		ctx.moveTo(tailBase[0], tailBase[1] - 3);
+		ctx.quadraticCurveTo(tailMid[0], tailMid[1] - 3, tailEnd[0], tailEnd[1] - 2);
+		ctx.stroke();
+
+		// Tail tip ice spike
+		ctx.fillStyle = white;
+		ctx.beginPath();
+		ctx.moveTo(tailEnd[0], tailEnd[1] - 4);
+		ctx.lineTo(tailEnd[0] - d * 12, tailEnd[1] - 1);
+		ctx.lineTo(tailEnd[0], tailEnd[1] + 4);
+		ctx.closePath();
 		ctx.fill();
-
+		ctx.strokeStyle = paleBlue;
 		ctx.lineWidth = 1;
+		ctx.stroke();
 
-		// Body
-		ctx.fillStyle = dark;
+		// === BACK LEGS ===
+		ctx.lineCap = 'round';
+		const legOffset = this.ducking ? 0 : 4;
+
+		// Back leg (behind body)
+		ctx.strokeStyle = darkBlue;
+		ctx.lineWidth = 7;
+		const backLegX = bodyCenterX - d * 5;
+		const backFootY = sy + this.rect.height - 2;
 		ctx.beginPath();
-		ctx.ellipse(sx + bodyW / 2 - 2, bodyY + bodyH / 2, bodyW / 2, bodyH / 2, 0, 0, Math.PI * 2);
-		ctx.fill();
+		ctx.moveTo(backLegX, bodyCenterY + 6);
+		ctx.lineTo(backLegX - d * 8, backFootY);
+		ctx.stroke();
 
-		ctx.fillStyle = mid;
-		ctx.beginPath();
-		ctx.ellipse(sx + bodyW / 2 + 2, bodyY + bodyH / 2 + 1, (bodyW - 7) / 2, (bodyH - 3) / 2, 0, 0, Math.PI * 2);
-		ctx.fill();
-
-		ctx.fillStyle = belly;
-		ctx.beginPath();
-		ctx.ellipse(sx + 9 + (bodyW - 22) / 2, bodyY + bodyH * 3 / 4, (bodyW - 22) / 2, bodyH / 4, 0, 0, Math.PI * 2);
-		ctx.fill();
-
-		// Ice crest
-		const crestCount = this.ducking ? 3 : 4;
-		for (let i = 0; i < crestCount; i++) {
-			const px = sx + 5 + i * 9;
-			const spikeH = 13 - i;
-			ctx.fillStyle = '#d7faff';
-			ctx.beginPath();
-			ctx.moveTo(px, bodyY + 4);
-			ctx.lineTo(px + 5, bodyY - spikeH);
-			ctx.lineTo(px + 10, bodyY + 4);
-			ctx.closePath();
-			ctx.fill();
-			ctx.strokeStyle = dark;
-			ctx.stroke();
-		}
-
-		// Legs
-		ctx.strokeStyle = dark;
+		ctx.strokeStyle = midBlue;
 		ctx.lineWidth = 5;
-		let legY, feet;
-		if (this.ducking) {
-			legY = sy + 25;
-			ctx.beginPath();
-			ctx.moveTo(sx + 8, sy + 23);
-			ctx.lineTo(sx - 20, legY + 2);
-			ctx.stroke();
-			ctx.beginPath();
-			ctx.moveTo(sx + 30, sy + 22);
-			ctx.lineTo(sx + 58, legY + 2);
-			ctx.stroke();
-			feet = [[sx - 20, legY + 2], [sx + 58, legY + 2]];
-		} else {
-			legY = sy + 42;
-			ctx.beginPath();
-			ctx.moveTo(sx + 8, sy + 34);
-			ctx.lineTo(sx - 14, legY + 2);
-			ctx.stroke();
-			ctx.beginPath();
-			ctx.moveTo(sx + 29, sy + 33);
-			ctx.lineTo(sx + 54, legY + 1);
-			ctx.stroke();
-			feet = [[sx - 14, legY + 2], [sx + 54, legY + 1]];
-		}
+		ctx.beginPath();
+		ctx.moveTo(backLegX, bodyCenterY + 6);
+		ctx.lineTo(backLegX - d * 8, backFootY);
+		ctx.stroke();
 
-		// Claws
-		ctx.strokeStyle = claw;
-		ctx.lineWidth = 1;
-		for (const foot of feet) {
-			for (let i = 0; i < 3; i++) {
+		// Back foot claws
+		this.drawClaws(ctx, backLegX - d * 8, backFootY, d, darkBlue);
+
+		// === BODY ===
+		// Body base (darker outline)
+		ctx.fillStyle = darkBlue;
+		ctx.beginPath();
+		ctx.ellipse(bodyCenterX, bodyCenterY, bodyW / 2 + 2, bodyH / 2 + 2, 0, 0, Math.PI * 2);
+		ctx.fill();
+
+		// Main body
+		const bodyGrad = ctx.createLinearGradient(bodyCenterX, bodyY, bodyCenterX, bodyY + bodyH);
+		bodyGrad.addColorStop(0, lightBlue);
+		bodyGrad.addColorStop(0.4, midBlue);
+		bodyGrad.addColorStop(1, darkBlue);
+		ctx.fillStyle = bodyGrad;
+		ctx.beginPath();
+		ctx.ellipse(bodyCenterX, bodyCenterY, bodyW / 2, bodyH / 2, 0, 0, Math.PI * 2);
+		ctx.fill();
+
+		// Belly
+		ctx.fillStyle = bellyColor;
+		ctx.beginPath();
+		ctx.ellipse(bodyCenterX + d * 5, bodyCenterY + bodyH * 0.2, bodyW * 0.35, bodyH * 0.35, d * 0.2, 0, Math.PI * 2);
+		ctx.fill();
+
+		// Body scales pattern
+		for (let row = 0; row < 3; row++) {
+			for (let col = 0; col < 4; col++) {
+				const scaleX = bodyCenterX - 12 + col * 8 + (row % 2) * 4;
+				const scaleY = bodyY + 6 + row * 7;
+				ctx.fillStyle = row === 0 ? paleBlue : (row === 1 ? lightBlue : midBlue);
 				ctx.beginPath();
-				ctx.moveTo(foot[0], foot[1]);
-				ctx.lineTo(foot[0] + d * (5 + i * 4), foot[1] + 3 + i);
+				ctx.ellipse(scaleX, scaleY, 4, 3, 0, 0, Math.PI);
+				ctx.fill();
+				ctx.strokeStyle = darkBlue;
+				ctx.lineWidth = 0.5;
 				ctx.stroke();
 			}
 		}
 
-		// Neck
-		ctx.fillStyle = mid;
+		// === ICE CREST SPINES ===
+		const crestCount = this.ducking ? 4 : 5;
+		for (let i = 0; i < crestCount; i++) {
+			const spineX = bodyCenterX - 8 + i * 8;
+			const spineH = 16 - i * 2 + Math.sin(t * 6 + i) * 1.5;
+			const spineWave = Math.sin(t * 4 + i * 0.5) * 1;
+
+			// Spine glow
+			ctx.fillStyle = 'rgba(200,240,255,0.3)';
+			ctx.beginPath();
+			ctx.moveTo(spineX - 1, bodyY + 2);
+			ctx.lineTo(spineX + 4 + spineWave, bodyY - spineH - 3);
+			ctx.lineTo(spineX + 9, bodyY + 2);
+			ctx.closePath();
+			ctx.fill();
+
+			// Main spine
+			const spineGrad = ctx.createLinearGradient(spineX, bodyY, spineX, bodyY - spineH);
+			spineGrad.addColorStop(0, paleBlue);
+			spineGrad.addColorStop(0.5, white);
+			spineGrad.addColorStop(1, '#ffffff');
+			ctx.fillStyle = spineGrad;
+			ctx.beginPath();
+			ctx.moveTo(spineX, bodyY + 2);
+			ctx.lineTo(spineX + 4 + spineWave, bodyY - spineH);
+			ctx.lineTo(spineX + 8, bodyY + 2);
+			ctx.closePath();
+			ctx.fill();
+
+			ctx.strokeStyle = lightBlue;
+			ctx.lineWidth = 1;
+			ctx.stroke();
+		}
+
+		// === FRONT LEG ===
+		const frontLegX = bodyCenterX + d * 12;
+		ctx.strokeStyle = darkBlue;
+		ctx.lineWidth = 8;
 		ctx.beginPath();
-		ctx.ellipse(sx + 25 - d * 4 + 8, headY + 8 + 6.5, 8, 6.5, 0, 0, Math.PI * 2);
+		ctx.moveTo(frontLegX, bodyCenterY + 4);
+		ctx.lineTo(frontLegX + d * 14, backFootY);
+		ctx.stroke();
+
+		ctx.strokeStyle = midBlue;
+		ctx.lineWidth = 6;
+		ctx.beginPath();
+		ctx.moveTo(frontLegX, bodyCenterY + 4);
+		ctx.lineTo(frontLegX + d * 14, backFootY);
+		ctx.stroke();
+
+		ctx.strokeStyle = lightBlue;
+		ctx.lineWidth = 2;
+		ctx.beginPath();
+		ctx.moveTo(frontLegX, bodyCenterY + 2);
+		ctx.lineTo(frontLegX + d * 12, backFootY - 2);
+		ctx.stroke();
+
+		this.drawClaws(ctx, frontLegX + d * 14, backFootY, d, darkBlue);
+
+		// === NECK ===
+		const neckX = bodyCenterX + d * 18;
+		ctx.fillStyle = midBlue;
+		ctx.beginPath();
+		ctx.ellipse(neckX, headY + 12, 10, 8, d * 0.3, 0, Math.PI * 2);
 		ctx.fill();
 
-		// Head
-		const headX = sx + 28 + d * 17;
-		ctx.fillStyle = light;
+		// === HEAD ===
+		const headX = bodyCenterX + d * 32;
+		const headCenterY = headY + 4;
+
+		// Head base
+		ctx.fillStyle = darkBlue;
 		ctx.beginPath();
-		ctx.ellipse(headX, headY, 13.5, 10.5, 0, 0, Math.PI * 2);
+		ctx.ellipse(headX, headCenterY, 16, 13, d * 0.15, 0, Math.PI * 2);
+		ctx.fill();
+
+		// Head main
+		const headGrad = ctx.createRadialGradient(headX - d * 3, headCenterY - 4, 0, headX, headCenterY, 16);
+		headGrad.addColorStop(0, paleBlue);
+		headGrad.addColorStop(0.5, lightBlue);
+		headGrad.addColorStop(1, midBlue);
+		ctx.fillStyle = headGrad;
+		ctx.beginPath();
+		ctx.ellipse(headX, headCenterY, 14, 11, d * 0.15, 0, Math.PI * 2);
 		ctx.fill();
 
 		// Snout
-		ctx.fillStyle = light;
+		const snoutTipX = headX + d * 28;
+		const snoutTipY = headCenterY + 2;
+		ctx.fillStyle = lightBlue;
 		ctx.beginPath();
-		ctx.moveTo(headX + d * 4, headY - 4);
-		ctx.lineTo(headX + d * 31, headY);
-		ctx.lineTo(headX + d * 7, headY + 10);
+		ctx.moveTo(headX + d * 10, headCenterY - 6);
+		ctx.quadraticCurveTo(snoutTipX + d * 4, headCenterY - 2, snoutTipX, snoutTipY);
+		ctx.quadraticCurveTo(snoutTipX - d * 2, headCenterY + 6, headX + d * 8, headCenterY + 8);
 		ctx.closePath();
 		ctx.fill();
-		ctx.strokeStyle = dark;
+
+		// Snout highlight
+		ctx.strokeStyle = paleBlue;
+		ctx.lineWidth = 2;
+		ctx.beginPath();
+		ctx.moveTo(headX + d * 12, headCenterY - 4);
+		ctx.quadraticCurveTo(snoutTipX - d * 5, headCenterY - 3, snoutTipX - d * 2, snoutTipY);
 		ctx.stroke();
 
-		// Jaw
-		ctx.fillStyle = mid;
+		// Jaw line
+		ctx.strokeStyle = darkBlue;
+		ctx.lineWidth = 1.5;
 		ctx.beginPath();
-		ctx.moveTo(headX + d * 7, headY + 8);
-		ctx.lineTo(headX + d * 27, headY + 3);
-		ctx.lineTo(headX + d * 8, headY + 13);
-		ctx.closePath();
+		ctx.moveTo(headX + d * 6, headCenterY + 6);
+		ctx.quadraticCurveTo(headX + d * 18, headCenterY + 5, snoutTipX - d * 3, snoutTipY + 1);
+		ctx.stroke();
+
+		// Nostrils
+		ctx.fillStyle = darkBlue;
+		ctx.beginPath();
+		ctx.ellipse(snoutTipX - d * 4, snoutTipY - 2, 2, 1.5, 0, 0, Math.PI * 2);
 		ctx.fill();
 
-		// Eye
-		ctx.fillStyle = eye;
+		// === EYE ===
+		const eyeX = headX + d * 4;
+		const eyeY = headCenterY - 3;
+
+		// Eye socket
+		ctx.fillStyle = darkBlue;
 		ctx.beginPath();
-		ctx.ellipse(headX + d * 6, headY - 2, 4, 3.5, 0, 0, Math.PI * 2);
-		ctx.fill();
-		ctx.fillStyle = pupil;
-		ctx.fillRect(headX + d * 6 - 1, headY - 6, 2, 7);
-		ctx.fillStyle = '#f5ffff';
-		ctx.beginPath();
-		ctx.arc(headX + d * 6 + d, headY - 4, 1, 0, Math.PI * 2);
+		ctx.ellipse(eyeX, eyeY, 6, 5, 0, 0, Math.PI * 2);
 		ctx.fill();
 
-		// Nostril
-		ctx.fillStyle = '#031415';
+		// Eye white/gold
+		const eyeGrad = ctx.createRadialGradient(eyeX - d, eyeY - 1, 0, eyeX, eyeY, 5);
+		eyeGrad.addColorStop(0, '#fff8d0');
+		eyeGrad.addColorStop(0.6, eyeGold);
+		eyeGrad.addColorStop(1, eyeRim);
+		ctx.fillStyle = eyeGrad;
 		ctx.beginPath();
-		ctx.arc(headX + d * 23, headY + 1, 2, 0, Math.PI * 2);
+		ctx.ellipse(eyeX, eyeY, 5, 4, 0, 0, Math.PI * 2);
 		ctx.fill();
+
+		// Pupil (vertical slit)
+		ctx.fillStyle = '#0a1520';
+		ctx.beginPath();
+		ctx.ellipse(eyeX + d * 0.5, eyeY, 1.5, 3.5, 0, 0, Math.PI * 2);
+		ctx.fill();
+
+		// Eye highlight
+		ctx.fillStyle = '#ffffff';
+		ctx.beginPath();
+		ctx.arc(eyeX - d * 1.5, eyeY - 1.5, 1.5, 0, Math.PI * 2);
+		ctx.fill();
+
+		// Eye rim
+		ctx.strokeStyle = eyeRim;
+		ctx.lineWidth = 1;
+		ctx.beginPath();
+		ctx.ellipse(eyeX, eyeY, 5, 4, 0, 0, Math.PI * 2);
+		ctx.stroke();
+
+		// Small head scales
+		for (let i = 0; i < 3; i++) {
+			const scX = headX - d * 6 + i * 5 * d;
+			const scY = headCenterY - 6 + i * 2;
+			ctx.fillStyle = paleBlue;
+			ctx.beginPath();
+			ctx.ellipse(scX, scY, 3, 2, 0, 0, Math.PI);
+			ctx.fill();
+		}
+
+		// Brow ridge
+		ctx.strokeStyle = midBlue;
+		ctx.lineWidth = 2;
+		ctx.beginPath();
+		ctx.arc(eyeX, eyeY - 2, 7, Math.PI + 0.5, Math.PI * 2 - 0.5);
+		ctx.stroke();
 
 		// Mouth frost
 		if (this.shootCooldown <= 3) {
@@ -1091,6 +1231,26 @@ class Player {
 			ctx.lineTo(flameX + 3, flameY + 4);
 			ctx.closePath();
 			ctx.fill();
+		}
+	}
+
+	drawClaws(ctx, x, y, direction, color) {
+		ctx.strokeStyle = '#e8faff';
+		ctx.lineWidth = 2;
+		ctx.lineCap = 'round';
+		for (let i = 0; i < 3; i++) {
+			ctx.beginPath();
+			ctx.moveTo(x, y);
+			ctx.lineTo(x + direction * (6 + i * 3), y + 2 + i * 2);
+			ctx.stroke();
+		}
+		ctx.strokeStyle = color;
+		ctx.lineWidth = 1;
+		for (let i = 0; i < 3; i++) {
+			ctx.beginPath();
+			ctx.moveTo(x + direction * (6 + i * 3) - direction, y + 1 + i * 2);
+			ctx.lineTo(x + direction * (8 + i * 3), y + 3 + i * 2);
+			ctx.stroke();
 		}
 	}
 }
@@ -1822,6 +1982,12 @@ export function createGame(canvas) {
 	}
 
 	function handleKeyDown(e) {
+		// Prevent page scrolling for game controls
+		const gameKeys = ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', ' ', 'w', 'W', 'a', 'A', 's', 'S', 'd', 'D'];
+		if (gameKeys.includes(e.key)) {
+			e.preventDefault();
+		}
+
 		if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') keys.left = true;
 		if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') keys.right = true;
 		if (e.key === 'ArrowUp' || e.key === 'w' || e.key === 'W') {
@@ -1834,7 +2000,6 @@ export function createGame(canvas) {
 				spaceJustPressed = true;
 			}
 			keys.space = true;
-			e.preventDefault();
 		}
 		if (e.key === 'r' || e.key === 'R') {
 			currentLevel = 1;
@@ -2061,7 +2226,7 @@ export function createGame(canvas) {
 			enemy.draw(ctx, cameraX, cameraY, timeAlive, player);
 		}
 
-		player.draw(ctx, cameraX, cameraY);
+		player.draw(ctx, cameraX, cameraY, timeAlive);
 		drawUI();
 
 		animationId = requestAnimationFrame(gameLoop);
