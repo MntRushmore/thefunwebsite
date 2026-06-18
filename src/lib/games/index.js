@@ -24,6 +24,13 @@ export const games = [
 		blurb: 'Run, jump, and breathe fire across the sky to reach the swirling portal.',
 		accent: '#dc2323',
 		emoji: '🐉'
+	},
+	{
+		slug: 'programiz-html-css',
+		title: 'Zombie Pixel Runner',
+		blurb: 'Jump, dodge, and race through a neon platformer challenge.',
+		accent: '#7c4dff',
+		emoji: '🕹️'
 	}
 ];
 
