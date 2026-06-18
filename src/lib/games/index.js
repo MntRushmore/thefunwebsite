@@ -31,6 +31,13 @@ export const games = [
 		blurb: 'Jump, dodge, and race through a neon platformer challenge.',
 		accent: '#7c4dff',
 		emoji: '🕹️'
+	},
+	{
+		slug: 'ice-lizard',
+		title: 'Ice Lizard vs Glacier Monsters',
+		blurb: 'Freeze enemies and platform through 5 icy levels as a blue ice lizard.',
+		accent: '#55aad2',
+		emoji: '🦎'
 	}
 ];
 
