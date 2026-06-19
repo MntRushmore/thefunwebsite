@@ -95,7 +95,9 @@
 
 <section class="panel" class:has-player={current !== null}>
 	<h1>Songs</h1>
-	<p>Our whole album, all in one place. Tap a cover to play. 🎵</p>
+	<p>Our whole album, all in one place. 🎵</p>
+
+	<div class="coming-soon">🎧 Music coming soon — covers are up, the songs are on their way!</div>
 
 	<ul class="grid">
 		{#each songs as song, i (song.title)}
@@ -188,9 +190,21 @@
 	}
 
 	p {
-		margin: 0 0 28px;
+		margin: 0 0 18px;
 		color: #34495e;
 		line-height: 1.5;
+	}
+
+	.coming-soon {
+		display: inline-block;
+		margin: 0 auto 28px;
+		padding: 10px 20px;
+		background: var(--yellow);
+		border: 3px solid var(--orange);
+		border-radius: 100px;
+		font-weight: 700;
+		color: #2c3e50;
+		line-height: 1.4;
 	}
 
 	.grid {
