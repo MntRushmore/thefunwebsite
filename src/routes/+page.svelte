@@ -1,36 +1,12 @@
 <script>
-	let expandedFaqItem = $state(/** @type {number | null} */ (null));
-
-	// FAQ data — replace with your own questions and answers
-	const faqData = [
-		{
-			question: 'What is The Fun Website?',
-			answer: 'Placeholder answer. Tell visitors what The Fun Website is all about right here.'
-		},
-		{
-			question: 'How do I get started?',
-			answer: 'Placeholder answer. Explain how someone can jump in and start having fun.'
-		},
-		{
-			question: 'Is it free?',
-			answer: 'Placeholder answer. Let people know about pricing (or that it is free!).'
-		},
-		{
-			question: 'Who is this for?',
-			answer: 'Placeholder answer. Describe who will love The Fun Website.'
-		},
-		{
-			question: 'Who made this?',
-			answer: 'Placeholder answer. Add a little about the team behind The Fun Website.'
-		}
+	// A few album covers to tease the songs page. Files live in /static/music.
+	const featuredCovers = [
+		'potato pal pic.png',
+		'glow pic.png',
+		'golden days pic.png',
+		'sunshine state of mind pic.png',
+		'when the rain comes down pic.png'
 	];
-
-	/**
-	 * @param {number} index
-	 */
-	function toggleFaqItem(index) {
-		expandedFaqItem = expandedFaqItem === index ? null : index;
-	}
 </script>
 
 <svelte:head>
@@ -77,32 +53,31 @@
 		</div>
 	</div>
 
+	<a class="songs-banner" href="/songs" aria-label="Listen to our songs">
+		<div class="songs-banner-text">
+			<span class="songs-eyebrow">🎵 New album out now</span>
+			<h2>Listen to our songs</h2>
+			<p>13 brand-new tracks — tap a cover and press play.</p>
+			<span class="songs-cta">Play now →</span>
+		</div>
+		<div class="songs-covers" aria-hidden="true">
+			{#each featuredCovers as cover, i (cover)}
+				<img
+					src={`/music/${encodeURIComponent(cover)}`}
+					alt=""
+					loading="lazy"
+					style={`--i:${i}`}
+				/>
+			{/each}
+		</div>
+	</a>
+
 	<div class="prizes-row">
 		<img src="prizes/crossword.png" alt="Crossword puzzle" class="prize-image" />
 		<img src="prizes/personality-quiz.png" alt="Personality Quiz" class="prize-image" />
 		<img src="prizes/fun-tickets.png" alt="The Fun Website tickets" class="prize-image highlight" />
 		<img src="prizes/quiz-logo.png" alt="Quiz" class="prize-image" />
 		<img src="prizes/subway-surfers.png" alt="Subway Surfers" class="prize-image" />
-	</div>
-
-	<div class="faq-section">
-		<h3>Have questions? We answer them!!!</h3>
-		<div class="faq-list">
-			{#each faqData as item, index}
-				<div class="faq-item">
-					<button class="faq-question" onclick={() => toggleFaqItem(index)}>
-						<span>{item.question}</span>
-						<span class="faq-arrow" class:expanded={expandedFaqItem === index}>▼</span>
-					</button>
-
-					{#if expandedFaqItem === index}
-						<div class="faq-answer">
-							<p>{item.answer}</p>
-						</div>
-					{/if}
-				</div>
-			{/each}
-		</div>
 	</div>
 
 	<footer>
@@ -223,6 +198,124 @@
 		left: 96%;
 	}
 
+	/* Prominent call-out to the songs page, with a fanned stack of real covers. */
+	.songs-banner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: clamp(20px, 5vw, 56px);
+		flex-wrap: wrap;
+		width: min(880px, calc(100% - 32px));
+		margin: 64px auto 0;
+		padding: clamp(24px, 4vw, 40px) clamp(24px, 5vw, 52px);
+		background-color: rgba(255, 255, 255, 0.94);
+		border: 5px solid var(--orange);
+		border-radius: 32px;
+		box-shadow: 0 18px 50px rgba(20, 50, 100, 0.3);
+		text-decoration: none;
+		transition:
+			transform 0.2s ease,
+			box-shadow 0.2s ease;
+	}
+
+	.songs-banner:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 24px 60px rgba(20, 50, 100, 0.38);
+	}
+
+	.songs-banner-text {
+		flex: 1 1 240px;
+		text-align: left;
+	}
+
+	.songs-eyebrow {
+		display: inline-block;
+		background: var(--yellow);
+		border: 2px solid var(--orange);
+		border-radius: 100px;
+		padding: 4px 14px;
+		font-size: 0.85rem;
+		font-weight: 700;
+		color: #2c3e50;
+		margin-bottom: 12px;
+	}
+
+	.songs-banner-text h2 {
+		margin: 0 0 8px;
+		font-size: clamp(1.8rem, 5vw, 2.6rem);
+		font-weight: 800;
+		color: #2c3e50;
+		letter-spacing: -0.5px;
+	}
+
+	.songs-banner-text p {
+		margin: 0 0 18px;
+		color: #34495e;
+		line-height: 1.5;
+	}
+
+	.songs-cta {
+		display: inline-block;
+		background: var(--yellow);
+		border: 3px solid var(--orange);
+		border-radius: 100px;
+		padding: 10px 22px;
+		font-weight: 800;
+		color: #2c3e50;
+		transition: background 0.2s ease;
+	}
+
+	.songs-banner:hover .songs-cta {
+		background: var(--orange);
+	}
+
+	/* Covers fan out like a spread deck and straighten on hover. */
+	.songs-covers {
+		flex: 0 0 auto;
+		display: flex;
+		align-items: center;
+		padding: 10px 0;
+	}
+
+	.songs-covers img {
+		width: clamp(64px, 12vw, 96px);
+		height: clamp(64px, 12vw, 96px);
+		object-fit: cover;
+		border-radius: 14px;
+		border: 3px solid #fff;
+		box-shadow: 0 8px 18px rgba(20, 50, 100, 0.28);
+		margin-left: -28px;
+		transform: rotate(calc((var(--i) - 2) * 6deg));
+		transition:
+			transform 0.2s ease,
+			margin 0.2s ease;
+	}
+
+	.songs-covers img:first-child {
+		margin-left: 0;
+	}
+
+	.songs-banner:hover .songs-covers img {
+		transform: rotate(0deg);
+		margin-left: -14px;
+	}
+
+	.songs-banner:hover .songs-covers img:first-child {
+		margin-left: 0;
+	}
+
+	@media (max-width: 640px) {
+		.songs-banner {
+			justify-content: center;
+			text-align: center;
+		}
+
+		.songs-banner-text {
+			text-align: center;
+			flex-basis: 100%;
+		}
+	}
+
 	.prizes-row {
 		display: flex;
 		justify-content: center;
@@ -275,80 +368,6 @@
 		50% {
 			transform: translateY(-10px);
 		}
-	}
-
-	.faq-section {
-		margin: 40px 20px;
-		padding: 32px;
-		text-align: center;
-	}
-
-	.faq-section h3 {
-		margin: 0 0 24px 0;
-		color: #2c3e50;
-		font-size: 24px;
-		font-weight: 700;
-		letter-spacing: -0.5px;
-	}
-
-	.faq-list {
-		text-align: left;
-		max-width: 600px;
-		margin: 0 auto;
-	}
-
-	.faq-item {
-		margin-bottom: 0;
-	}
-
-	.faq-item:last-child {
-		border-bottom: none;
-	}
-
-	.faq-question {
-		width: 100%;
-		background: none;
-		border: none;
-		padding: 20px 16px;
-		text-align: left;
-		cursor: pointer;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		color: #2c3e50;
-		font-size: 1em;
-		font-family: inherit;
-		font-weight: 600;
-		line-height: 1.4;
-	}
-
-	.faq-question:hover {
-		color: #1a252f;
-	}
-
-	.faq-arrow {
-		transition: transform 0.2s;
-		font-size: 14px;
-		color: #435b89;
-		margin-left: 12px;
-		flex-shrink: 0;
-	}
-
-	.faq-arrow.expanded {
-		transform: rotate(180deg);
-	}
-
-	.faq-answer {
-		padding: 0 16px 20px 16px;
-		color: #34495e;
-		line-height: 1.6;
-		font-size: 1em;
-		font-family: inherit;
-	}
-
-	.faq-answer p {
-		margin: 0;
-		font-weight: 400;
 	}
 
 	.login-inputs :global(button) {
