@@ -220,7 +220,7 @@
 	/* songs — top-right, outside the logo circle */
 	.badge-songs {
 		top: 18%;
-		left: 88%;
+		left: 96%;
 	}
 
 	.prizes-row {
