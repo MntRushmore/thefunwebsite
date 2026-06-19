@@ -55,7 +55,7 @@
 
 	<div class="login-inputs">
 		<p style="color: white; font-size: 1.1rem; margin-bottom: 0.25rem;">click a button to have fun!</p>
-		<p style="color: #fff575; font-size: 1.4rem; font-weight: 700; margin-top: 0.5rem;">our business plan</p>
+		<a href="https://docs.google.com/document/d/1rGTrUIS2fze64H3hUzArpsPUuLhjR6w9DKL8-fJ6OIE/edit?tab=t.0" style="color: #fff575; font-size: 1.4rem; font-weight: 700; margin-top: 0.5rem; display: block;">our business plan</a>
 	</div>
 
 	<div class="sample-room">
