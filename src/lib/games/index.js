@@ -14,6 +14,7 @@
  * @property {string} blurb
  * @property {string} accent
  * @property {string} emoji
+ * @property {string} [href]
  */
 
 /** @type {GameMeta[]} */

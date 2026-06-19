@@ -14,7 +14,7 @@
 	<ul class="grid">
 		{#each games as game (game.slug)}
 			<li>
-				<a class="card" href="/games/{game.slug}" style="--accent: {game.accent}">
+				<a class="card" href={game.href ?? `/games/${game.slug}`} style="--accent: {game.accent}">
 					<span class="emoji" aria-hidden="true">{game.emoji}</span>
 					<span class="title">{game.title}</span>
 					<span class="blurb">{game.blurb}</span>

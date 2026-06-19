@@ -54,7 +54,8 @@
 	<img class="logo-bg" src="hero.png" alt="The Fun Website" />
 
 	<div class="login-inputs">
-		<p style="color: white;">click a button to have fun!</p>
+		<p style="color: white; font-size: 1.1rem; margin-bottom: 0.25rem;">click a button to have fun!</p>
+		<p style="color: #fff575; font-size: 1.4rem; font-weight: 700; margin-top: 0.5rem;">our business plan</p>
 	</div>
 
 	<div class="sample-room">
