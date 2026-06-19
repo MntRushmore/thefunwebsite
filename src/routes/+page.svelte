@@ -81,8 +81,7 @@
 	</div>
 
 	<footer>
-		<p>made with ❤️ by your team</p>
-		<p>placeholder footer text — add credits or links here</p>
+		<p>made with ❤️ by the funnest kids ever</p>
 	</footer>
 </main>
 
