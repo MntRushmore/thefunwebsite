@@ -65,9 +65,9 @@
 			<a href="/games" class="badge badge-games" aria-label="Games">
 				<img src="landing/makegames.png" alt="Games" />
 			</a>
-			<a href="/puzzle" class="badge badge-puzzles" aria-label="Puzzles">
-				<img src="landing/buildhouses.png" alt="Puzzles" />
-			</a>
+		<a href="/songs" class="badge badge-songs" aria-label="Songs">
+			<img src="/songs%20final%20button.png" alt="Songs" />
+		</a>
 			<a href="/quizzes" class="badge badge-quizzes" aria-label="Quizzes">
 				<img src="landing/getprizes.png" alt="Quizzes" />
 			</a>
@@ -212,6 +212,12 @@
 	.badge-quizzes {
 		top: 100%;
 		left: 94%;
+	}
+
+	/* songs — top-right, outside the logo circle */
+	.badge-songs {
+		top: 18%;
+		left: 88%;
 	}
 
 	.prizes-row {
